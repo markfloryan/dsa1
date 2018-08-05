@@ -39,5 +39,9 @@
     "mustache": "^2.3.0",
     "socket.io": "^1.7.3"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^5.5.0",
+    "reveal.js-d3js": "^1.0.0"
+  }
 }
