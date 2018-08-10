@@ -120,6 +120,7 @@ public class Room {
 		roomba.turnClockwise();
 		roomba.turnClockwise();
 		roomba.moveForward();
+		roomba.wallSensor = false;
 		/* If the roomba runs into something, set the sensor value */
 		for(int i=roomba.getX()-r; i<=roomba.getX()+r; i++) {
 			for(int j = roomba.getY() - r; j <= roomba.getY() + r; j++) {

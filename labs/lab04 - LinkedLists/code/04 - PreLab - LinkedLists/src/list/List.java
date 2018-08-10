@@ -32,9 +32,13 @@ public interface List<T> {
 	 */
 	public void insertAt(int index, T data);
 	
+	/**
+	 * Remove at tail and head respectively
+	 * @return
+	 */
 	public T removeAtTail();
-	
 	public T removeAtHead();
+	
 	
 	/**
 	 * Returns index of first occurrence of the data in the list, or -1 if not present
@@ -49,6 +53,5 @@ public interface List<T> {
 	 * @return
 	 */
 	public T get(int index);
-	
 	
 }

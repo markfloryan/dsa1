@@ -12,19 +12,18 @@ public class LinkedList<T> implements List<T>{
 	private int size;
 	
 	public LinkedList() {
-		//TODO: Write constructor
+		//TODO: Write this method
 	}
 	
 	public int size() {
-		//TODO: Write size method
-		return -1
+		//TODO: Write this method
 	}
 	
 	/**
 	 * Clears out the entire list
 	 */
 	public void clear() {
-		//TODO: Write clear method
+		//TODO: Write this method
 	}
 	
 	/**
@@ -32,7 +31,7 @@ public class LinkedList<T> implements List<T>{
 	 * @param data
 	 */
 	public void insertAtTail(T data) {
-		//TODO: Write insertAtTail
+		//TODO: Write this method
 	}
 	
 	/**
@@ -40,7 +39,7 @@ public class LinkedList<T> implements List<T>{
 	 * @param data
 	 */
 	public void insertAtHead(T data) {
-		//TODO: Write insertAtHead
+		//TODO: Write this method
 	}
 	
 	/**
@@ -49,16 +48,34 @@ public class LinkedList<T> implements List<T>{
 	 * @param index
 	 */
 	public void insertAt(int index, T data) {
-		//TODO: Write insertAt()
+		//TODO: Write this method
 	}
 	
+	/**
+	 * Inserts data after the node pointed to by iterator
+	 */
+	public void insert(ListIterator<T> it, T data) {
+		//TODO: Write this method
+	}
+	
+	
+	
 	public T removeAtTail(){
-		//TODO: Write removeAtTail()
+		//TODO: Write this method
 		return null;
 	}
 	
 	public T removeAtHead(){
-		//TODO: Write removeAtHead()
+		//TODO: Write this method
+		return null;
+	}
+	
+	/**
+	 * Remove based on Iterator position
+	 * Sets the iterator to the node AFTER the one removed
+	 */
+	public T remove(ListIterator<T> it) {
+		//TODO: Write this method
 		return null;
 	}
 	
@@ -68,8 +85,8 @@ public class LinkedList<T> implements List<T>{
 	 * @return
 	 */
 	public int find(T data) {
-		//TODO: Write find
-		return -1;
+		//TODO: Write this method
+		return null;
 	}
 	
 	/**
@@ -78,7 +95,7 @@ public class LinkedList<T> implements List<T>{
 	 * @return
 	 */
 	public T get(int index) { 
-		//TODO: Write get
+		//TODO: Write this method
 		return null;
 	}
 	
@@ -86,15 +103,25 @@ public class LinkedList<T> implements List<T>{
 	 * Returns the list as space separated values
 	 */
 	public String toString() {
-		String toRet = "";
+		String toRet = "[";
 		
-		ListNode<T> curNode = head.getNext();
+		ListNode<T> curNode = head.next;
 		while(curNode != tail) {
-			toRet += curNode.getData() + " ";
-			curNode = curNode.getNext();
+			toRet += curNode.getData() + ", ";
+			curNode = curNode.next;
 		}
 		
-		return toRet;
+		return toRet + "]";
+	}
+	
+	/* Return iterators at front and end of list */
+	public ListIterator<T> front(){
+		//TODO: Write this method
+		return null;
+	}
+	public ListIterator<T> back(){
+		//TODO: Write this method
+		return null;
 	}
 	
 	

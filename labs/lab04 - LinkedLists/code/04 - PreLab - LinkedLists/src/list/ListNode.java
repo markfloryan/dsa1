@@ -11,13 +11,8 @@ public class ListNode<T> {
 	private T data;
 	
 	/* Reference to the next node in the list */
-	private ListNode<T> next;
-	private ListNode<T> prev;
-	
-	public ListNode() {
-		this.next = null;
-		this.prev = null;
-	}
+	protected ListNode<T> next;
+	protected ListNode<T> prev;
 	
 	public ListNode(T data) {
 		this.data = data;
@@ -27,10 +22,4 @@ public class ListNode<T> {
 	
 	/* Getters */
 	public T getData() { return this.data; }
-	public ListNode<T> getNext() { return this.next; }
-	public ListNode<T> getPrev() { return this.prev; }
-	
-	/* Setters */
-	public void setNext(ListNode<T> next) { this.next = next; }
-	public void setPrev(ListNode<T> prev) { this.prev = prev; }
 }
