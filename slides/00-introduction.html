@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CS 2501: 00-introduction slide set</title>
+    <meta name="description" content="Slides for a Data Structures and Algorithms Course">
+    <meta name="author" content="Mark Floryan">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="../slides/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="../slides/reveal.js/css/theme/white.css" id="theme">
+   <!-- <link rel="stylesheet" href="../slides/css/pdr.css">-->
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="../slides/reveal.js/lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? '../slides/reveal.js/css/print/pdf.css' : '../slides/reveal.js/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <!--[if lt IE 9]>
+	<script src="../slides/reveal.js/lib/js/html5shiv.js"></script>
+	<![endif]-->
+    <!---->
+    <script type="text/javascript" src="../slides/js/dhtmlwindow.js"></script>
+    <script type="text/javascript" src="../slides/js/canvas.js"></script>
+    <script src="node_modules/mermaid/dist/mermaid.min.js"></script>
+    <script>
+    var config = {
+        startOnLoad:true,
+        theme:"neutral",
+        flowchart:{
+            useMaxWidth:false,
+            htmlLabels:true
+        }
+    };
+    mermaid.initialize(config);
+</script>
+    <link rel="stylesheet" href="../slides/css/dhtmlwindow.css" type="text/css">
+    
+  </head>
+
+  <body onload="canvasinit()">
+    <div id="dhtmlwindowholder"><span style="display:none"></span></div>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+	<section data-markdown><script type="text/template">
+&nbsp;
+## CS2501
+### Data Structures and Algorithms 1
+&nbsp;
+<center><small>[Mark Floryan](http://www.cs.virginia.edu/~mrf8t) / [mrf8t@virginia.edu](mailto:mrf8t@virginia.edu)</small></center>
+<center><small>Repository: [github.com/markfloryan/dsa1](http://github.com/markfloryan/dsa1) / [&uarr;](index.html) </small></center>
+&nbsp;
+### Introduction to Course
+	</script></section>
+	<section data-markdown><script type="text/template">
+### Contents
+&nbsp;  
+[What is this pilot program?](#/pilot) <br />
+[Course Logistics](#/logistics) <br />
+[Grading](#/grading) <br />
+[Honor Policy](#/honor) <br />
+	</script></section>
+
+<!-- NEW SECTION -->
+	<section> 
+
+<section data-markdown id="pilot" class="center"><script type="text/template">
+### What is this pilot program?
+</script></section>
+
+<section class="diagram-slide">
+<h4>Current Curriculum</h4>
+<span class="diagram-data" style="display:none;">
+  graph TD
+    A[1110] --> B[2110: Software Dev.]
+    B --> C[2150: DSA + COA]
+    C --> D[3330: Architecture]
+    C --> E[4102: Algorithms]
+    C --> F[...]
+  </span><div class="diagram-display"></div>
+</section>
+
+<section class="diagram-slide">
+<h4>Proposed Curriculum</h4>
+<span class="diagram-data" style="display:none;">
+  graph TD
+    A[1110] --> B[DSA 1]
+    A --> C[COA 1]
+    A --> D[SWE 1]
+    A --> E[...]
+    B --> F[DSA 2]
+    C --> G[COA 2]
+    D --> H[SWE 2]
+    E --> I[...]
+  </span><div class="diagram-display"></div>
+</section>
+
+	</section>
+
+<!---------------------------------------------- -->
+
+<!-- NEW SECTION -->
+  <section> 
+
+<section data-markdown id="logistics" class="center"><script type="text/template">
+### Course Logistics
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Your Instructors
+
+- Dr. Mark R. Floryan
+  - Office: Rice Hall 203
+  - OH: TBD
+
+- TAs:
+  - TBD
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Meeting Times
+
+- Lecture: MWF 12-12:50pm @ Olsson 011
+  - Lectures by yours truly
+  - Attendance not required but HIGHLY recommended
+  - Seriously, just show up
+  - __NO LAPTOPS ALLOWED__
+
+- Lab: WR 6:30-7:45pm @ MEC 213/215
+  - Labs run by TAs
+  - Attendance is required!!
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Homework
+
+- Labs ARE the homework here.
+- Each week you will have
+  - __Prelab__: Coding assignment. Due Wednesday before noon
+  - __Inlab__: Coding exercises in person w/ TAs. Simulates interviews. Grading attendance based.
+  - __Postlab__: Report w/ analysis of prelab code. Submitted as pdf.
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Exams
+
+- Midterms
+  - Taken in lab section
+  - Yes, the Thursday folks have more time to study. Get over it.
+  - Oct. 3-4 and Nov. 7-8
+
+- Final Exam
+  - Friday Dec. 14 2pm-5pm
+  - In lecture room
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Submitting Assignments
+
+- Labs and slides can be found on the course github repository
+  - go [here](https://github.com/markfloryan/dsa1)
+- Labs submitted to the Collab assignments page 
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Course Material 1
+
+- Java (I have to assume you haven't seen it)
+  - Data types / control flow / objects / references
+  - Generic types
+  - Inheritence / Enums / Interfaces / Polymorphism
+  - Recursion / Collections / Etc.
+  - Exceptions / IDEs / Debugging / JVM / Compilers
+- Lists
+  - Arrays vs Linked Lists vs Vectors
+  - Abstract Data Types
+  - Stacks and Queues
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Course Material 2
+
+- Big OH - Big Omega - Big Theta
+  - Definitions / Function relationships
+  - Examples
+- Trees
+  - Structure / Binary Tree / Recursive Traversals
+  - BST and operations
+  - Balanced trees (AVL and Red-Black)
+- Hash Tables
+  - Operations / Structure
+  - Hash functions
+  - Collision Resolution
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Course Material 3
+
+- Priority Queues
+  - Structure / Operations
+  - Min-Heap / Array Implementation
+  - Analysis
+- Sorting
+  - Slow sorts (insertion / bubble)
+  - Fast sorts (merge, quick, heap)
+  - Hybrid sorts (Time Sort, etc.)
+- Concurrency
+  - High level abstraction in Java
+  - Resource contention / deadlocks
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Labs
+
+- Lab 1: Intro to Java / Warmup
+- Lab 2: Roomba Simulator
+- Lab 3: Blackjack robot
+- Lab 4: Linked Lists
+- Lab 5: Stacks / Queues
+- Lab 6: Concurrency
+- Lab 7: Trees
+- Lab 8: Sorting
+- Lab 9: Hash Tables
+- Lab 10: Priority Queue
+- Lab 11: Something Fun?
+</script></section>
+
+</section>
+
+<!---------------------------------------------- -->
+
+<!---------------------------------------------- -->
+
+<!-- NEW SECTION -->
+  <section> 
+
+<section data-markdown id="grading" class="center"><script type="text/template">
+### Grading
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Grading Breakdown
+
+- Labs: 18%
+  - Prelab code grading by quality of code / correctness
+  - Inlab graded by attendance / participation
+  - Postlab by quality of report
+- Midterms: 25% each (50% for both)
+- Final Exam: 32%
+</script></section>
+
+
+
+</section>
+
+<!---------------------------------------------- -->
+
+<!---------------------------------------------- -->
+
+<!-- NEW SECTION -->
+<section> 
+
+<section data-markdown id="honor" class="center"><script type="text/template">
+### Other Course Policies
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Honor Policy
+
+- You may:
+  - Collaborate on labs by discussion / whiteboarding / pseudocoding
+  - Compare code AFTER lab submitted
+  - Show code to TA or Instructor to get help
+  - Must write YOUR OWN CODE
+- You may not:
+  - Look at code (other than own) BEFORE lab is due
+  - Look at code online that implements a key part of data structure or assignment
+    - e.g., looking up syntax in the java api is ok
+    - looking up how to implement a queue is not
+</script></section>
+
+<section data-markdown class="center"><script type="text/template">
+### Recording Policy
+
+- You may not record me lecturing. This is a personal decision.
+
+- __UVA POLICY__: "The University prohibits the recording or transmission of classroom lectures and discussions by students unless written permission from the Instructor has been obtained and all students in the class as well as guest speakers have been informed that audio/video recording may occur."
+</script></section>
+
+</section>
+
+<!---------------------------------------------- -->
+
+<!-- EXTRA STUFF FOR SLIDE LIBRARY -->
+
+      </div>
+
+    </div>
+
+    <div id="calibratediv" style="display:none">
+      <div id="calibratecanvasdiv">
+        <canvas id="calibratecanvas" width="300" height="300">Your browser does not support the canvas tag</canvas>
+      </div>
+      <p style="text-align:center">Click the center of the target<br><a href="#" onClick="calibratewin.close(); return false">Close window</a></p>
+    </div>
+
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+    <!--<script src="js/settings.js"></script>-->
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: false,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal.js/plugin/search/search.js', async: true },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'https://d3js.org/d3.v4.min.js' },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true },
+          { src: 'reveal.js/plugin/mermaid/mermaid.js'}
+        ]
+      });
+    </script>
+
+  </body>
+</html>
