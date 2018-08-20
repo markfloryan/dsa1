@@ -6,7 +6,7 @@ CS2501 - Data Structures and Algorithms I
 <a name="introduction"></a>Introduction
 ---------------------------------------
 
-
+The repository contains content for CS2501 - Data Structures and Algorithms I at [ the University of Virginia](https://virginia.edu). This course is part of the Computer Science department's [curriculum pilot](https://pilot.cs.virginia.edu). 
 
 
 <a name="contents"></a>Repository Contents
@@ -16,15 +16,8 @@ CS2501 - Data Structures and Algorithms I
 this online at github.com -- you will need to clone (download) the
 repository first**
 
-- [book](book/index.html) ([md](book/index.md)): the beginnings of a textbook to be used for this course.  It is written using LaTeX.
-- [docs](docs/index.html) ([md](docs/index.md)): a series of useful documents that are not labs or tutorials.
-- [uva](uva/index.html) ([md](uva/index.md)): the materials that are specific to CS 2150 as taught at the University of Virginia, such as daily announcements, due dates, etc.
-- [exams](exams/index.html) ([md](exams/index.md)): past exams for the course; there are two midterms and a final for each semester.
-- [ibcm](ibcm/ibcm.html) ([md](ibcm/ibcm.md)): the files necessary for the IBCM module on machine language, which is taught about two thirds of the way into the course.
-- [labs](labs/index.html) ([md](labs/index.md)): the labs are the main assignments in the course, and each lab is split into pre-lab, in-lab, and post-lab parts.  There are 11 full labs, with a partial 12th lab that is an optional component of the course.  The labs are written using [markdown](http://daringfireball.net/projects/markdown/), and the rendered HTML version of each lab is also committed to this repository.
+- [labs](labs/index.html) ([md](labs/index.md)): the labs are the main assignments in the course, and each lab is split into pre-lab, in-lab, and post-lab parts.
 - [slides](slides/index.html) ([md](slides/index.md)): Contains the slides used in the course.  The slides use [reveal.js](https://github.com/hakimel/reveal.js/), an HTML presentation framework.
-- [tutorials](tutorials/index.html) ([md](tutorials/index.md)): the tutorials that are used as part of the lab assignments, these are primarily Linux tutorials.
-- [utils](utils/index.html) ([md](utils/index.md)): various utilities for this repository
 
 <a name="contributing"></a>Contributing to this Repository
 ----------------------------------------------------------
@@ -32,14 +25,14 @@ repository first**
 Updates to the repository are restricted to approved individuals only, to prevent anybody from messing with the slides right before a lecture.  However, others can still contribute to this repository -- to do so, take the following steps:
 
 1. Create a github account, if you do not have one
-2. Fork this repository: you can click on the "Fork" link in the upper right, or just click [here](https://github.com/markfloryan/pdr/fork)
+2. Fork this repository: you can click on the "Fork" link in the upper right, or just click [here](https://github.com/markfloryan/dsa1/fork)
 3. Clone your forked repository on to your local machine
 4. Make any changes you want to your forked version, then commit and push your changes back to your forked repository
 5. Create a pull request, following the instructions [here](https://help.github.com/articles/creating-a-pull-request)
 
 At that point, I will receive a notice that a change has been submitted, and I'll look at it and hopefully accept it into the main repository.
 
-When you want to bring in the updates from the main pdr github repository into your forked repository, you will need to follow the instructions [here](https://help.github.com/articles/syncing-a-fork).
+When you want to bring in the updates from the main dsa1 github repository into your forked repository, you will need to follow the instructions [here](https://help.github.com/articles/syncing-a-fork).
 
 
 <a name="description"></a>Course Description
