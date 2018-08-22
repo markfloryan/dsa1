@@ -1,4 +1,4 @@
-CS 2150: Program and Data Representation: Course Syllabus
+CS 2501: Data Structures and Algorithms I
 =========================================================
 
 [Main Logistics Page](./index.html)
