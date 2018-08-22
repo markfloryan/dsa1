@@ -39,7 +39,7 @@ CS 2150: Program and Data Representation: Course Syllabus
 
 I expect that grades will follow the standard decade curve: 90 and above is an A of some sort (A-, A, or A+), 80 and above is some sort of a B, etc.  **Note:** I reserve the right to modify the weighting (changing the curve, adding pop quizzes, etc.), especially if attendance drops off significantly.  If this does happen, it will be clearly announced in lecture.
 
-**Special Circumstances:** Students with special circumstances (athletics, extra time required on exams, final exam conflicts, SDAC considerations, etc.) need to let one of us know during the **first week of class**.
+**Special Circumstances:** Students with special circumstances (athletics, extra time required on exams, final exam conflicts, SDAC considerations, etc.) need to let me know during the **first week of class**.
 
 **Textbooks: ** Due to the high cost of textbooks, and their relative low quality, there will be no recommended nor required textbooks this semester.
 
@@ -55,10 +55,10 @@ The various dates: open dates, due dates, and close dates, are listed on the [La
 
 **Computing resources:** There are two specific computer resources needed for this course:
 
-- You need to have a working computer that can run a recent build of [VirtualBox][36], with enough hard drive space (and memory) to use a course VirtualBox image (about 10 Gb will be needed for the install, and then 6 Gb  will be used once the installation files are deleted).  Any computer made in the last 3 years will suffice for these requirements (and many older ones will as well).  It doesn't matter if it's a desktop or notebook; nor does the speed matter.
-- There are a few documents that you will have to print (a worksheet with lab 5, the UNIX honor pledge, etc.).  The total printing load will be under 5 pages for the entire semester.  You will need to obtain access to a printer for those pages.
+- You need to have a working computer that can run [Java Eclipse IDE](https://www.eclipse.org/downloads/). Any modern laptop or desktop will have no problem running this software.
+- We will provide you with lab accounts. This will allow you to login remotely to our departmental lab servers and use a pre-set environment if you prefer. However, the department does not provide physical machines anymore, so you'll need your own machine to access those services.
 
-**Attendance:** Attendance in labs is mandatory; attendance in lecture is not. Not attending lab will result in a zero for the in-lab. You cannot change labs without prior permission -- we don't have enough computers to accommodate this.  Please see the [first set of lecture slides][11] about lab attendance, in particular with regards to the fact that there is a lab the week of Thanksgiving break.
+**Attendance:** Attendance in labs is mandatory; attendance in lecture is not. Not attending lab will result in a zero for the in-lab. You cannot change labs without prior permission. Please see the [first set of lecture slides](../slides/00-introduction.html) about lab attendance.
 
 **Recording Lectures:** You may NOT record my lectures. University policy states that this is not allowed without my consent.
 
