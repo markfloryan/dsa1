@@ -15,6 +15,6 @@ Below are the dates when the various assignment *submissions* for the lab parts 
 
 | Lab part | | Open date          	| | Due date               | | Close date                 |
 |----------|-|----------------------|-|------------------------|-|----------------------------|
-| Pre-lab  | | Sunday at 9 am  	  	| | Wednesday at 12 noon   | | Friday at 11:59 pm         |
+| Pre-lab  | | Sunday at 9 am  	  	| | Wednesday at 12 noon   | | Friday at 12 noon          |
 | In-lab   | | NA    			  	| | NA 					   | | NA 						  |
 | Post-lab | | Wednesday at 12 noon | | Friday at 12 noon      | | Sunday at 12 noon          |
