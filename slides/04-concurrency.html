@@ -316,7 +316,7 @@ public void run(){
 </script></section>
 
 <section class="diagram-slide">
-<h4>Multiple Core Concurrency</h4>
+<h4>Exceptions Example</h4>
 
 - In example below, Method 2 can either catch the exception or throw it to method 1 to deal with
 <br><br><br>
@@ -483,6 +483,16 @@ public void run(){
 ### Shared Resources and Race Conditions
     </script></section>
 
+<section data-markdown><script type="text/template">
+#### Race Condition Example
+
+- Consider the following program that contains __two threads__
+  - Variable int __amount__ in an account
+  - __Thread 1:__ repeatedly deposits $100 into the account (n times)
+  - __Thread 2:__ repeatedly withdraws $100 out of account (n times)
+
+- What would happen? We should end up with $0 right?
+</script></section>
 
 
 
