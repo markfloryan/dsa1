@@ -494,7 +494,157 @@ public void run(){
 - What would happen? We should end up with $0 right?
 </script></section>
 
+<section data-markdown><script type="text/template">
+#### BankAccount.Java
 
+<pre><code class="hljs" data-trim contenteditable>
+public class BankAccount {
+  private double balance;
+
+  public BankAccount(){
+    balance = 0;
+  }
+
+  public void deposit(double amount){
+    System.out.print("Depositing " + amount);
+    double newBalance = balance + amount;
+    System.out.println(", new balance is " + newBalance);
+    balance = newBalance;
+  }
+
+  public void withdraw(double amount){
+    System.out.print("Withdrawing " + amount);
+    double newBalance = balance - amount;
+    System.out.println(", new balance is " + newBalance);
+    balance = newBalance;
+  }
+  
+  public double getBalance(){ return balance; }
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Deposit Thread
+
+<pre><code class="hljs" data-trim contenteditable>
+public class DepositRunnable implements Runnable {
+  /* Initialize stuff, etc. */
+  
+  public void run(){
+    try{
+      for(int i = 1; i <= count; i++){
+        account.deposit(amount);
+        Thread.sleep(DELAY);
+      }
+    }
+    catch(InterruptedException exception){
+      
+    }
+  }
+}
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Withdraw Thread
+
+<pre><code class="hljs" data-trim contenteditable>
+public class WithdrawRunnable implements Runnable{
+  /* Initialize stuff, etc. */
+  
+  public void run(){
+    try{
+      for(int i = 1; i <= count; i++){
+        account.withdraw(amount);
+        Thread.sleep(DELAY);
+      }
+    }
+    catch(InterruptedException exception){
+      
+    }
+  }
+}
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Results?
+
+- Output:
+```
+...
+Depositing 100.0Withdrawing 100.0, new balance is
+100.0, new balance is -100.0
+```
+
+- Why? This is called a __race condition__!
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Race Conditions
+
+- A __race condition__ is a situation in which the order that threads execute alters the result of the execution. 
+  - i.e., the threads are racing and the output depends on which one is faster.
+- Race conditions can occur when there are __shared resources__: variables or objects that multiple threads are interacting with at once.
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Why does this happen?
+
+- The code below...
+
+<pre><code class="hljs" data-trim contenteditable>
+  double newBalance = balance + amount;
+</code></pre>
+
+- Is turned into (by the compiler) something like this:
+
+<pre><code class="hljs" data-trim contenteditable>
+  #I don't expect you to fully understand this
+  mov rax, balance
+  mov rax, amount
+  mov balance, rax
+</code></pre>
+
+- This means that a thread may have calculated that the new balance is 100+100 = 200 BEFORE storing that result (200) back into the variable balance.
+- If the thread is interrupted at that point, then bad things could happen.
+</script></section>
+
+<section class="diagram-slide">
+<h4>What we hope happens</h4>
+
+<span class="diagram-data" style="display:none;">
+sequenceDiagram
+    Withdraw --> Balance:  
+    Note right of Balance: balance=100
+    Balance ->> Deposit: 100
+    Note right of Deposit: Dep = 100+100 = 200
+    Deposit ->> Balance: 200
+    Note right of Balance: balance=200
+    Balance ->> Withdraw: 200
+    Note left of Withdraw: Wit = 200-100 = 100
+    Withdraw ->> Balance: 100
+    Note right of Balance: balance=200
+</span><div class="diagram-display"></div>
+</section>
+
+<section class="diagram-slide">
+<h4>What might very well happen instead</h4>
+
+<span class="diagram-data" style="display:none;">
+sequenceDiagram
+    Withdraw --> Balance:  
+    Note right of Balance: balance=100
+    Balance ->> Deposit: balance: 100
+    Note right of Deposit: Dep = 100+100 = 200
+    Balance ->> Withdraw: balance: 100
+    Note right of Withdraw: Wit = 100-100 = 0
+    Withdraw ->> Balance: set: 0
+    Note right of Balance: balance=0
+    Deposit ->> Balance: 200
+    Note right of Balance: balance=200
+</span><div class="diagram-display"></div>
+</section>
 
 </section>
 <!---------------------------------------------- -->
@@ -507,6 +657,103 @@ public void run(){
 <section id="locks" data-markdown class="center"><script type="text/template">
 ### Locks
     </script></section>
+
+<section data-markdown><script type="text/template">
+#### Fixing Race Conditions
+
+- To eliminate a race condition, we use some kind of __lock__ object.
+- A __lock__ is a resource that only one thread is allowed to "hold" at a single time.
+  - Forces threads to "take turns"
+  - But also usually slows execution down because one thread may have to wait on the other.
+- Many types of locks out there, we will use Java's __ReentrantLock__.
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Locks
+
+- When there is a shared resource, we usually instantiate a lock:
+
+<pre><code class="hljs" data-trim contenteditable>
+  private Lock balanceChangeLock;
+
+  public BankAccount(){
+    balanceChangeLock = new ReentrantLock();
+  }
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Locks
+
+- Then, when we use the shared resource, we grab the lock first
+
+<pre><code class="hljs" data-trim contenteditable>
+  balanceChangeLock.lock();
+  balance = balance + amount;
+  balanceChangeLock.unlock();
+</code></pre>
+
+- If lock() called and another thread has the lock, this thread will wait.
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Locks
+
+- If an exception is thrown while lock acquired, the unlock never occurs.
+
+<pre><code class="hljs" data-trim contenteditable>
+  balanceChangeLock.lock();
+  balance = balance + amount;
+  /* Exception thrown here */
+  balanceChangeLock.unlock();
+</code></pre>
+
+- Use a try/catch instead
+
+<pre><code class="hljs" data-trim contenteditable>
+  balanceChangeLock.lock();
+  try{
+    balance = balance + amount;
+    /* Exception maybe thrown here */
+  }
+  catch{ /* Stuff here */ }
+  finally{
+    balanceChangeLock.unlock();
+  }
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Final Deposit Code
+
+<pre><code class="hljs" data-trim contenteditable>
+public void deposit(double amount){
+  balanceChangeLock.lock();
+  try{
+    System.out.print("Depositing: " + amount);
+    double newBalance = balance + amount;
+    System.out.println(", new balance is " + newBalance);
+    balance = newBalance;
+  }
+  finally{
+    balanceChangeLock.unlock();
+  }
+}
+</code></pre>
+
+- ...and similar code for withdraw!
+
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Final Notes on Locks
+
+- When a thread calls lock, in __owns the lock__ until unlock is called
+- Another thread that calls lock() will be deactivated by the scheduler so that it "waits" for the lock.
+  - Occassionally activated so it can see if the lock is now available.
+- Eventually (hopefully) waiting thread can acquire the lock.
+</script></section>
+
 </section>
 <!---------------------------------------------- -->
 
