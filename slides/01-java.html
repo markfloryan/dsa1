@@ -68,6 +68,7 @@
 [Data Types](#/dataTypes) <br />
 [Arrays](#/arrays) <br />
 [Control Flow](#/controlFlow) <br />
+[Example](#/example) <br />
 [References](#/references) <br />
 [Methods and Parameters](#/methodsAndParams) <br />
 [Classes](#/classes) <br />
@@ -606,6 +607,63 @@ Output:
 Sum is 24
 ```
 </script></section>
+
+</section>
+
+<!---------------------------------------------- -->
+
+<!-- Example -->
+  <section> 
+
+<section data-markdown id="example" class="center"><script type="text/template">
+### Example
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### An Example
+
+- Let's put all of this together in one program.
+- __Challenge__: FIZZ-BUZZ is a common interview question. Write a program that plays Fizz-Buzz perfectly.
+- __Fizz-Buzz__: Count up from 1 to 1000. Print out each number but:
+  - If number divisible by 3, say Fizz instead of the number
+  - If number divisible by 5, say Buzz instead of the number
+  - If both, say Fizz Buzz
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Let's Code it!!
+
+<pre><code class="hljs" data-trim contenteditable>
+import java.io.*;
+
+//Let's finish it together
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Solution
+
+<pre><code class="hljs" data-trim contenteditable>
+import java.io.*;
+
+public class FizzBuzz{
+  public static void main(String[] args){
+
+    for(int i=1; i<=1000; i++){
+      if(i % 3 == 0)
+        System.out.print("Fizz ");
+      if(i % 5 == 0)
+        System.out.print("Buzz ");
+      if(i % 3 != 0 && i % 5 != 0)
+        System.out.print(i);
+
+      System.out.print("\n"); //new line
+    }
+  }  
+}
+</code></pre>
+</script></section>
+
 
 </section>
 
