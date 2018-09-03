@@ -19,6 +19,7 @@ repository first**
 - [Course Logistics](courseLogistics/index.html): The syllabus, introductory slide deck, etc.
 - [labs](labs/index.html) ([md](labs/index.md)): the labs are the main assignments in the course, and each lab is split into pre-lab, in-lab, and post-lab parts.
 - [slides](slides/index.html) ([md](slides/index.md)): Contains the slides used in the course.  The slides use [reveal.js](https://github.com/hakimel/reveal.js/), an HTML presentation framework.
+- [class exercises](java/classExercises.html): Code we wrote in lecture 
 - Other stuff:
 	- [java cheat sheet](java/javaCheatSheet/javaCheatSheet.pdf): A cheat sheet of common Java things. Will be updated throughout the semester.
 
