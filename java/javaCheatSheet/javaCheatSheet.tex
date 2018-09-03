@@ -203,11 +203,28 @@ s1.toUpperCase();	//returns the string as all uppercase
 s1.toLowerCase();	//returns the string as all lowercase
 \end{lstlisting}
 
-Oftentimes, we need to convert from a string version of a number into its actual type. We can do this:
+\section{Converting Between Data Types}
+
+In Java, we often need to convert between different types of variables. Here are some common conversions:
 
 \begin{lstlisting}
-Integer.parseInt("123");	//converts string "123" into integer 123
-Double.parseDouble("3.14")	//converts string "3.14" into double 3.14
+/* int (or any other primitive) to string */
+int x = 5;
+String s = "" + x;	//"" + variable concatenates as a string
+
+/* String version of number to int or double */
+int i = Integer.parseInt("123");		//converts string "123" into integer 123
+double d = Double.parseDouble("3.14")	//converts string "3.14" into double 3.14
+
+/* dividing integers does integer division */
+int x1 = 3;
+int x2 = 5;
+double result = x1 / x2; 			// 3/5=(int)0.6 = 0
+result = (double)x1 / (double)x2;	//0.6
+
+/* double to int */
+double x = 3.467;
+int y = (int)x;		//y is 3, decimal truncated
 \end{lstlisting}
 
 
