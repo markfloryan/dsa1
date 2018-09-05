@@ -70,6 +70,7 @@
 [Shared Resources and Race Conditions](#/race) <br />
 [Locks](#/locks) <br />
 [Avoiding Deadlocks](#/deadlocks) <br />
+[Blocking Queue](#/blockingqueue) <br />
 </script></section>
 
 <!-- NEW SECTION -->
@@ -765,20 +766,155 @@ public void deposit(double amount){
 <section id="deadlocks" data-markdown class="center"><script type="text/template">
 ### Avoiding Deadlocks
     </script></section>
+
+
+<section data-markdown><script type="text/template">
+#### Deadlocks
+
+- A __Deadlock__ is a problem that occurs when no thread can proceed because each is waiting on another.
+  - e.g., thread A is waiting on B which is waiting on C which is waiting on A
+  - No progress is made and the program freezes forever.
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Banking Example
+
+<pre><code class="hljs" data-trim contenteditable>
+public void withdraw(double amount){
+  balanceChangeLock.lock();
+  try{
+    while(balance < amount)
+      /* Wait for balance to grow */
+      //...
+  }
+  finally{
+    balanceChangeLock.unlock();
+  }
+}
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Banking Example
+
+- How to wait for the balance to grow?
+  - Cannot just wait, because thread owns the balanceChangeLock!
+  - Thus, no other thread can deposit because they will be blocked by withdraw
+  - Withdraw will never finish because deposit cannot happen
+  - Deadlock!!!!
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Overcoming Deadlocks
+
+- Java contains a __condition object__.
+- These allow a thread to temporarily release a lock until a condition is met and then reacquire the lock.
+- This is done autonomously, so no race conditions within this acquisition step.
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Condition Objects
+
+<pre><code class="hljs" data-trim contenteditable>
+public class BankAccount{
+  private Lock balanceChangeLock;
+  private Condition sufficientFundsCondition;
+
+  public BankAccount(){
+    balanceChangeLock = new ReentrantLock();
+    sufficientFundsCondition = 
+                balanceChangeLock.newCondition();
+    /* ... */
+  }
+}
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Condition Objects
+
+<pre><code class="hljs" data-trim contenteditable>
+public void withdraw(double amount){
+  balanceChangeLock.lock();
+  try{
+    while(balance < amount){
+      sufficientFundsCondition.await();
+    }
+    //...
+  }
+  finally{
+    balanceChangeLock.unlock();
+  }
+}
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Condition Objects
+
+- await makes the current thread wait and allows other threads to grab the lock while waiting. 
+- To unblock the waiting thread, you need to call:
+
+```
+sufficientFundsCondition.signalAll();
+```
+
+- This lets other threads know that the condition might now be met for the waiting thread. Gives control back to waiting threads.
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Signalling
+
+<pre><code class="hljs" data-trim contenteditable>
+public void deposit(double amount)
+{
+  balanceChangeLock.lock();
+  try{
+    System.out.print("Depositing " + amount);
+    double newBalance = balance + amount;
+    System.out.println(", new balance is " + newBalance);
+    balance = newBalance;
+    sufficientFundsCondition.signalAll(); // money added!
+  }
+  finally{ balanceChangeLock.unlock(); }
+}
+</code></pre>
+</script></section>
+
 </section>
 <!---------------------------------------------- -->
 
 
+<!-- NEW SECTION -->
+<!---------------------------------------------- -->
+<section>
+<section id="blockingqueue" data-markdown class="center"><script type="text/template">
+### Blocking Queue
+    </script></section>
 
 
+<section data-markdown><script type="text/template">
+#### Concurrent Queue
+
+- Suppose we have a linked-list backed __queue__ and we want to be able to access the queue with multiple threads.
+- Doesn't seem too bad, should be able to enqueue at front at same time as dequeueing at back. 
+- This is your pre-lab assignment this week.
+</script></section>
+
+<section data-markdown><script type="text/template">
+#### Blocking Concurrent Queue
+
+- Enqueue - Lock the queue, then add the element
+- Dequeue - Lock the queue, then delete the element
+  - If no nodes to delete, then await a signal that something has been added
+  - This is the "blocking" part because the queue will wait until it can delete something
+- Note that there are more efficient ways to implement this, but this is sufficient for our lab.
+</script></section>
+
+</section>
 
 
-
-
-
-
-
-
+<!---------------------------------------------- -->
 
 
 
