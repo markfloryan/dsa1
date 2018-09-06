@@ -13,3 +13,6 @@ CS2501 - Data Structures and Algorithms I
 
 - [Lab 4](./lab04 - LinkedLists/lab04.pdf): Linked List and related analysis
 
+- [Lab 5](./lab05 - StacksAndQueues/lab05.pdf): Stacks and Queues
+
+- [Lab 6](./lab06 - Concurrency/lab06.pdf): Concurrency in Java
