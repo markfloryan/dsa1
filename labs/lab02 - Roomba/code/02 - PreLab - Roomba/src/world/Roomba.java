@@ -176,8 +176,19 @@ public abstract class Roomba {
 		this.frontBumper = false;
 	}
 	
-	public int getX() { return x; }
-	public int getY() { return y; }
+	protected int getX() {
+		if(RoombaSimulator.lock) {
+			return -1; 
+		}
+		return x;
+	}
+	public int getY() {
+		if(RoombaSimulator.lock) {
+			return -1; 
+		}
+		return y;
+	}
+	
 	public int getRadius() { return radius; }
 	public Direction getDirection() { return this.direction; }
 

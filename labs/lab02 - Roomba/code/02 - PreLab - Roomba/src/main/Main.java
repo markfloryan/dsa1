@@ -12,7 +12,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		Room r = new Room(800, 600, 6);
+		Room r = new Room(800, 600, 20);
 		MyRoomba robo = new MyRoomba(450, 450, 10);
 		
 		RoombaSimulator sim = new RoombaSimulator(robo, r);
@@ -24,8 +24,5 @@ public class Main {
 		
 		sim.setGui(gui);
 		sim.simulate();
-		
-		
-
 	}
 }
