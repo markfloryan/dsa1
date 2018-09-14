@@ -175,7 +175,7 @@ public interface List{
   public void remove(double value);
 
   /* finds the value and returns its index, if present */
-  public double find(double value);
+  public int find(double value);
 
   /* overwrites the item at a specified index */
   public void setAt(int index, double value);
@@ -200,7 +200,7 @@ public interface List{
 /* A class that IS a list */
 //implements keywork means this object is a list
 //and thus MUST contain and implement all of the methods
-//int the List interface
+//in the List interface
 public class Vector implements List{
   
   private double[] theList;
@@ -210,7 +210,7 @@ public class Vector implements List{
     /* and actually do the inserting*/
   }
 
-  public double find(double value){
+  public int find(double value){
     for(int i = 0; i < theList.length; i++){
       if(theList[i] == value) return i;
     }

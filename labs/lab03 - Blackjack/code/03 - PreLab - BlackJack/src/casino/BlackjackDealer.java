@@ -45,7 +45,7 @@ public class BlackjackDealer {
 		
 		/* Get the player's first move */
 		Move playerMove = player.getMove();
-		while(playerMove != Move.STAY) {
+		while(playerMove != Move.STAY && handScore(this.playerHand) < 21) {
 			if(playerMove == Move.HIT) hitPlayer();
 			if(playerMove == Move.DOUBLE) {
 				player.takeChips(bet);
