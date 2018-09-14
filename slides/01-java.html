@@ -95,7 +95,7 @@ public class HelloWorld{
     System.out.println("Hello World");
   }
 }
-          </code></pre>
+</code></pre>
 
 ```
 Output:
@@ -1697,6 +1697,8 @@ public class Deck {
    * Shuffles the deck
    */
   public void shuffle() {
+    top = 0;
+    
     for(int i = 0; i < 51; i++) {
       /*Get a random position between i and 51*/
       int r = (int)(Math.random()*(52-i))+i;
