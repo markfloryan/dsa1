@@ -14,7 +14,8 @@ public class MyBlackjackPlayer extends BlackjackPlayer{
 	@Override
 	public Move getMove() {
 		/* Hits until we get a score of 16 or better */
-		return Move.HIT;
+		if(this.handScore() <= 16) return Move.HIT;
+		return Move.STAY;
 	}
 
 	@Override

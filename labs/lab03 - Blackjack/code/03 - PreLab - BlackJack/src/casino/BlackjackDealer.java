@@ -8,6 +8,8 @@ public class BlackjackDealer {
 	private ArrayList<Card> dealerHand = new ArrayList<Card>();
 	private ArrayList<Card> playerHand = new ArrayList<Card>(); //duplicate of player hand so no foul play occurs
 	
+	int playerChips = 1000;
+	
 	private DeckStack decks = new DeckStack(5);
 	
 	public BlackjackDealer(BlackjackPlayer p) {
@@ -25,6 +27,10 @@ public class BlackjackDealer {
 		return dealerHand.get(0);
 	}
 	
+	public int cardsLeft() {
+		return decks.cardsLeft();
+	}
+	
 	protected void playHand() {
 		/* Clear the player hands */
 		this.player.cards.clear();
@@ -36,6 +42,7 @@ public class BlackjackDealer {
 		
 		int bet = player.getBet();
 		player.takeChips(bet);
+		playerChips -= bet;
 		
 		/* Deal the cards */
 		hitDealer();
@@ -49,6 +56,7 @@ public class BlackjackDealer {
 			if(playerMove == Move.HIT) hitPlayer();
 			if(playerMove == Move.DOUBLE) {
 				player.takeChips(bet);
+				playerChips -= bet;
 				bet*=2;    
 				hitPlayer();
 				break;
@@ -70,13 +78,20 @@ public class BlackjackDealer {
 		System.out.println("Player Chips Before: " + (this.player.getChips()+bet));
 		
 		//If dealer has black jack, game over
+		int win = 0;
 		if(d == 21 && this.dealerHand.size() == 2); //do nothing, keep player bet
 		else if(p > 21); //player busts
-		else if(d > 21) this.player.giveChips(bet + bet); //dealer busts, payout is 1.5x
-		else if(p == 21 && this.playerHand.size() == 2) this.player.giveChips(bet+((int)(bet*1.5))); //blackjack! payout is 2x
-		else if(p > d) this.player.giveChips(bet+bet); //player wins, payout is 1.5x
-		else if(p == d) this.player.giveChips(bet); //tie, player gets the bet back
+		else if(d > 21) win=bet*2; //dealer busts, payout is 1.5x
+		else if(p == 21 && this.playerHand.size() == 2) win = bet+((int)(bet*1.5)); //blackjack! payout is 2x
+		else if(p > d) win = bet*2; //player wins, payout is 1.5x
+		else if(p == d) win = bet; //tie, player gets the bet back
+		player.giveChips(win);
+		playerChips += win;
 		
+		if(!verifyChips()) {
+			System.out.println("FATAL ERROR: Chip count doesn't match, player is trying to manipulate their chip amount!!!");
+			System.exit(3);
+		}
 		
 		System.out.println("Dealer Hand: " + this.dealerHand);
 		System.out.println("Dealer Score: " + d + "\n");
@@ -104,6 +119,10 @@ public class BlackjackDealer {
 		}
 		
 		return tot;
+	}
+	
+	private boolean verifyChips() {
+		return player.getChips() == this.playerChips;
 	}
 
 }

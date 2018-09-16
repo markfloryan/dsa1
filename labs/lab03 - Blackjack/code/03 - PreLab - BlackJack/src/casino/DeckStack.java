@@ -11,7 +11,7 @@ public class DeckStack {
 	}
 	
 	public Card dealTopCard() {
-		
+		return null;
 	}
 	
 	protected void restoreDecks() {
@@ -19,7 +19,7 @@ public class DeckStack {
 	}
 	
 	public int cardsLeft() {
-		
+		return -1;
 	}
 	
 	
