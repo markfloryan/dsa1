@@ -484,9 +484,11 @@ public void remove(double value){
 <pre><code class="hljs" data-trim contenteditable>
 //the ? specifies that the type is a wildcard
 //the method will accept any type of List
- private static void printlist(List< ? > list) 
+private static void printlist(List< ? > list) 
 {
-   System.out.println(list);
+  for(int i=0; i < list.size(); i++) {
+    System.out.print(list.get(i) + " ");
+  }
 }
 </code></pre>
 </script></section>
@@ -624,11 +626,11 @@ public class Vector < T >{
 <pre><code class="hljs" data-trim contenteditable>
 public class Vector < T >{
 
-  private Object theList[]; //<--USE OBJECT INSTEAD OF T
+  private T theList[];
   private int size;
 
   public Vector(){
-    this.theList = new Object[100];
+    this.theList = (T[])new Object[100]; //<--Cast here
   }
 
   public double find(T value){
@@ -654,7 +656,7 @@ public class Vector < T >{
   /* returns the item at specified index */
   public T getAt(int index){
     if(index >= 0 && index < this.size)
-      return (T)theList[index]; //<-- CAST THIS, COMPILER WILL WARN YOU
+      return theList[index];
     else
       ; //Uh Oh, we went off the bounds of the vector
   }
