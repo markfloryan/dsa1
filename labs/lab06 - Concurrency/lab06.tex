@@ -16,7 +16,7 @@
 \definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
 \definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
 \definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
- 
+
 \lstset{language=Java,
 basicstyle=\ttfamily,
 keywordstyle=\color{javapurple}\bfseries,
@@ -36,7 +36,7 @@ showstringspaces=false}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=cyan,
 }
 
@@ -67,8 +67,8 @@ showstringspaces=false}
 
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
 
-\title{	
-\normalfont \normalsize 
+\title{
+\normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
 \huge Lab 06 - Concurrency \\ % The assignment title
@@ -121,7 +121,7 @@ Your class must be alterable by different threads. Thus, you should protect the 
 
 \subsection{MainTester.java}
 
-You can test your code by running the main method in *MainTester.java*. This tester will first test your queue using a single thread and time the results. Then, the method will test your queue again using two threads and time the results again. Any errors that occur should be printed to the console. Make sure you run the tester multiple times. Race conditions can sometimes cause code to appear to work but not consistently. 
+You can test your code by running the main method in *MainTester.java*. This tester will first test your queue using a single thread and time the results. Then, the method will test your queue again using two threads and time the results again. Any errors that occur should be printed to the console. Make sure you run the tester multiple times. Race conditions can sometimes cause code to appear to work but not consistently.
 
 \subsection{OPTIONAL: Optimizing}
 
@@ -154,7 +154,7 @@ The TAs will lead you in going through the following challenges. It is ok if you
 \begin{enumerate}
 	\item Write a program that performs matrix multiplication in parallel. If you tweak the number of threads and what each thread does, How fast can you make the program run?
 	\item You want to write a program that accepts a list of numbers and filters out all of the values that are outside of a certain range. Write a multi-threaded program that does this. How fast can you make the code run?
-	\item Write a threaded program that simulates a rock, paper, scissors tournament. Given a number of competitors, pair them off and have each compete (randomly select RPS for each and see who wins). Then pair off the winners and repeat until you have a champion. Your competitors will simply be numbered $1$ through $n$. Use multithreading to speed up your program. How fast can you make your code run? 
+	\item Write a threaded program that simulates a rock, paper, scissors tournament. Given a number of competitors, pair them off and have each compete (randomly select RPS for each and see who wins). Then pair off the winners and repeat until you have a champion. Your competitors will simply be numbered $1$ through $n$. Use multithreading to speed up your program. How fast can you make your code run?
 \end{enumerate}
 
 If you have coded up all three of these and they work, then show the TA and you may leave early.
@@ -174,7 +174,7 @@ The goal of this post-lab is to write a report analyzing the efficiency of your 
 You will perform an experiment by doing the following:
 
 \begin{enumerate}
-	\item Write some test code (or use/modify what we provided) so that you can test the efficiency of your queue sequentially and concurrently. 
+	\item Write some test code (or use/modify what we provided) so that you can test the efficiency of your queue sequentially and concurrently.
 	\item Run a small experiment where you increase the number of elements added/removed to the queue until the queues start to become noticeably slow. Time how long your sequential vs concurrent queue took to complete.
 	\item Do a second experiment where you increase the number of threads accessing the concurrent queue at once. Time how long each test case takes to complete. For this test, keep the number of insertions / deletes constant.
 	\item Write a report summarizing and analyzing your findings
@@ -188,7 +188,7 @@ Summarize your experiment and your findings in a report. Make sure to adhere to 
 
 \begin{itemize}
 	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://github.com/markfloryan/dsa1}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
+	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://github.com/markfloryan/dsa1/blob/master/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
 	\item You should write your report as if it is original novel research.
 	\item The grammar / spelling / professionalism of this document should be sound.
 	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
