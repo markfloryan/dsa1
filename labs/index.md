@@ -16,3 +16,9 @@ CS2501 - Data Structures and Algorithms I
 - [Lab 5](./lab05 - StacksAndQueues/lab05.pdf): Stacks and Queues
 
 - [Lab 6](./lab06 - Concurrency/lab06.pdf): Concurrency in Java
+
+
+<a name="other"></a>Other Useful Stuff
+---------------------------------------
+
+- [Template for reports](./WordPaperTemplate.zip) 
