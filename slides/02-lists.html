@@ -819,7 +819,7 @@ private static < T > void printList(LinkedList< T > list) {
 /**
  * Inserts data after the node pointed to by iterator
  */
-public void insert(ListIterator<T> it, T data) {
+public void insert(ListIterator< T > it, T data) {
   //TODO in lab.
 }
 
@@ -827,7 +827,7 @@ public void insert(ListIterator<T> it, T data) {
  * Remove based on Iterator position
  * Sets the iterator to the node AFTER the one removed
  */
-public T remove(ListIterator<T> it) {
+public T remove(ListIterator< T > it) {
   //TODO in lab
 }
 </code></pre>
@@ -974,8 +974,7 @@ public class Stack< T >{
     //Set theArray[topOfStack] to value
   }
 
-  public T pop(){
-    //Set return value = theArray[topOfStack]
+  public void pop(){
     //Decrement topOfStack
   }
 
