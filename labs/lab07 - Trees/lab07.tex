@@ -98,36 +98,83 @@ This week, you will be implementing three classes, which are all increasingly co
 	\item Implement the missing methods in the AVLTree class (some of this is done for you to simplify the assignment)
 	\item Use the provided tester files to verify your implementation works. Note that you should test your code more so than the provided tester does this time. The tester is NOT as thorough as in previous labs.
 	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab07%20-%20Trees/code/trees.zip}{trees.zip}
-	\item \textbf{FILES TO SUBMIT:} lab06.zip
+	\item \textbf{FILES TO SUBMIT:} lab07.zip
 \end{enumerate}
 
 %------------------------------------------------
 
 \subsection{BinaryTree.java}
 
-To begin, implement the BinaryTree class. 
+To begin, implement the BinaryTree class. These are methods that are useful for ANY binary tree (whether balanced or not). You will need to implement the following methods:
 
 \begin{lstlisting}
-	public class Queue<T>{
-		public Queue();
-
-		public int size();
-
-		public void enqueue(T data);
-
-		public T dequeue();
-	}
+public class BinaryTree<T>{
+	//Prints the tree using in-order traversal
+	private void printInOrder(TreeNode<T> curNode);
+	
+	//Prints the tree using pre-order traversal
+	private void printPreOrder(TreeNode<T> curNode);
+	
+	//Prints the tree using post-order traversal
+	private void printPostOrder(TreeNode<T> curNode);
+}
 \end{lstlisting}
 
-Your class must be alterable by different threads. Thus, you should protect the fields (head, tail, etc.) of your linked list from being corrupted by multiple threads accessing the queue at once. For this lab, we care about *correctness* (i.e., the queue works as intended with multiple threads even if it could be optimized to run faster).
+The Binary Tree contains a few methods that are implemented for you. This includes the main print functions, that simply call the helper functions described above on the root to give off the recursive prints. In addition, a method called printTree() is provided that prints the tree in a somewhat formatted method. This may be useful when debugging your code. Lastly, a simple recursive method that computes the height of the binary tree is provided as an example of recursion in trees.
 
-\subsection{MainTester.java}
+\subsection{BinarySearchTree.java}
 
-You can test your code by running the main method in *MainTester.java*. This tester will first test your queue using a single thread and time the results. Then, the method will test your queue again using two threads and time the results again. Any errors that occur should be printed to the console. Make sure you run the tester multiple times. Race conditions can sometimes cause code to appear to work but not consistently.
+Next, you will implement a binary search tree. This class will extend the binary tree class from earlier, and thus inherit the print methods defined earlier. Your binary search tree should implement the provided Tree interface, shown below. 
 
-\subsection{OPTIONAL: Optimizing}
+\begin{lstlisting}
+public interface Tree<T extends Comparable<T>> {
+	
+	public void insert(T data);
+	
+	public boolean find(T data);
 
-Although we only care about correctness for this lab, if you are interested you should try to make your queue run as quickly as possible. What can you do to increase the degree to which multiple threads can use the queue in parallel? How fast can you make the concurrent test that we provided?
+	public void remove(T data);
+
+	public TreeNode<T> findMax(TreeNode<T> curNode);
+}
+
+/* You BST implements the interface above */
+public class BinarySearchTree<T extends Comparable<T>>
+					extends BinaryTree<T> implements Tree<T>{
+
+		//TODO: Implement this class
+}
+\end{lstlisting}
+
+You may add other supporting methods to your binary search tree if you find that to be helpful. 
+
+\subsection{AVLTree.java}
+
+Lastly, you will implement an AVL tree that inherits from your binary search tree. An AVL tree can take advantage of the insert and remove methods from the class it inherits from (i.e., BinarySearchTree.java). Thus, to insert into an avl tree, you can call super.insert() and then simply check if the current node needs to be balanced. Some of this implementation is provided for you, but you will have to implement the following methods yourself:
+
+\begin{lstlisting}
+public class AVLTree<T extends Comparable<T>>
+					extends BinarySearchTree<T>{
+
+	//Insert and remove are partially coded for you already
+
+	//figures out whether a double or single rotation is
+	//needed and in which direction(s)
+	private TreeNode<T> balance(TreeNode<T> curNode);
+			
+	//rotate right on the curNode provided
+	private TreeNode<T> rotateRight(TreeNode<T> curNode);
+	
+	//rotate left on the curNode provided
+	private TreeNode<T> rotateLeft(TreeNode<T> curNode);
+	
+	//compute the balance factor of the given node
+	private int balanceFactor(TreeNode<T> node);
+
+}
+\end{lstlisting}
+
+Once you are done, you can look at the two provided tester files to check your implementation. As stated earlier, these files do not rigorously check your implementations, so you should be writing your own test cases in addition to the few provided.
 
 When you are done, submit your entire project as a zip file to Collab.
 
@@ -140,26 +187,28 @@ When you are done, submit your entire project as a zip file to Collab.
 \newpage
 \section{In-Lab}
 
-The goal of this in-lab is to continue practicing with concurrent programming in a laid back environment. As usual, you will:
+The goal of this in-lab is to continue practicing with trees in a laid back environment. As usual, you will:
 
 \begin{enumerate}
 	\item Get into small groups of two
-	\item The TAs will present you with some programming challenges regarding threads. These will not be graded, but you are required to attend and to participate.
+	\item The TAs will present you with some programming challenges regarding trees. These will not be graded, but you are required to attend and to participate.
 	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
 	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
 \end{enumerate}
 
-\subsection{Concurrency Coding Challenges}
+\subsection{Trees}
 
-The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these.
+The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these. When coding these, you may want to use your tree implementations from the prelab for these challenges.
 
 \begin{enumerate}
-	\item Write a program that performs matrix multiplication in parallel. If you tweak the number of threads and what each thread does, How fast can you make the program run?
-	\item You want to write a program that accepts a list of numbers and filters out all of the values that are outside of a certain range. Write a multi-threaded program that does this. How fast can you make the code run?
-	\item Write a threaded program that simulates a rock, paper, scissors tournament. Given a number of competitors, pair them off and have each compete (randomly select RPS for each and see who wins). Then pair off the winners and repeat until you have a champion. Your competitors will simply be numbered $1$ through $n$. Use multithreading to speed up your program. How fast can you make your code run?
+	\item Write a method that accepts the root node of a binary tree, and flips the tree recursively. More formally, every right child and left child of EVERY node (including internal nodes) should be flipped.
+	\item Write a method that accepts the root of a binary tree, and returns tree iff the tree is symettrical. More formally, for all values x in the tree. If I can find x by going on some path (e.g, right, right, left), than I can find another copy of x by going the inverse of that path (e.g., left, left, right).
+	\item Given an \href{https://en.wikipedia.org/wiki/Binary_expression_tree}{expression tree}, print out the value of the expression. You can model this as a Binary Tree that stores strings. Use Integer.parseInt() to turn the numeric strings into integer equivalents.
+	\item On older phones, \href{https://en.wikipedia.org/wiki/T9_(predictive_text)}{T9 word} was used for texting friends. Users would type numbers on their phone (e.g., 2,2,8) and the system would find words that could be made with those sequence of letters. For example, 2 is either a,b, or c and 8 is either t,u,v. So one valid word the person may have been typing is cat. Write some code that reads in a list of valid english words, and builds a tree such that given a list of numbers typed, traversing that tree would take me to the valid english words that may have been spoken. Note that you will need a tree that has more than two children here.
+	\item Continuing the previous question, write a method that given the sequence of numbers typed and the tree above, prints out all the english words that may have been typed.
 \end{enumerate}
 
-If you have coded up all three of these and they work, then show the TA and you may leave early.
+If you have coded up all of these and they work, then show the TA and you may leave early.
 
 
 %------------------------------------------------
@@ -171,17 +220,19 @@ If you have coded up all three of these and they work, then show the TA and you 
 \newpage
 \section{Post-Lab}
 
-The goal of this post-lab is to write a report analyzing the efficiency of your concurrent queue from the pre-lab. Specifically, we are interested in how efficient your queue is compared to a sequential queue as you increase the number of items being added / removed and as you increase the number of threads accessing the queue in parallel.
+The goal of this post-lab is to write a report analyzing the use of a binary search tree versus an avl tree. For the first time, we will be asking to find a dataset on your own to use for your analysis. 
 
 You will perform an experiment by doing the following:
 
 \begin{enumerate}
-	\item Write some test code (or use/modify what we provided) so that you can test the efficiency of your queue sequentially and concurrently.
-	\item Run a small experiment where you increase the number of elements added/removed to the queue until the queues start to become noticeably slow. Time how long your sequential vs concurrent queue took to complete.
-	\item Do a second experiment where you increase the number of threads accessing the concurrent queue at once. Time how long each test case takes to complete. For this test, keep the number of insertions / deletes constant.
-	\item Write a report summarizing and analyzing your findings
+	\item Find a large corpus of data. I would recommend a large piece of text. Perhaps a very long article or a an electronic book. You may share datasets with each other if you find good ones.
+	\item Take your file and insert every element (e.g., word from the book) into both a binary search tree and an avl tree. Use a timer to see how long it takes to insert all of the elements into the avl versus the bst.
+	\item Call the find method on every word in your dataset. Time how long this operation takes in each data structure total.
+	\item Print out the height of each tree.
+	\item Now, repeat the experiment, but this time don't use a real dataset. Use random numbers from 1-10000. Do you notice any differences?
+	\item Write a report summarizing and analyzing your findings. Which data structure was faster.
 	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabSix.pdf
+	\item \textbf{FILES TO SUBMIT:} PostLabSeven.pdf
 \end{enumerate}
 
 \subsection{Report}
@@ -190,7 +241,7 @@ Summarize your experiment and your findings in a report. Make sure to adhere to 
 
 \begin{itemize}
 	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://github.com/markfloryan/dsa1/blob/master/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
+	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
 	\item You should write your report as if it is original novel research.
 	\item The grammar / spelling / professionalism of this document should be sound.
 	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
@@ -203,7 +254,7 @@ In addition to the general guidelines above, please follow the following rough o
 	\item \textbf{Introduction}: Present the problem, and provide details regarding the two strategies you implemented.
 	\item \textbf{Methods}: Describe your methodology for collecting data. How many method calls, how many executions, how you averaged things, etc.
 	\item \textbf{Results}: Describe your results from your execution runs.
-	\item \textbf{Conclusion}: Interpret your results. What happens as inserts / deletes in increased? What about number of threads? Did anything about the times you reported seem odd? If so, why do you think that might be?
+	\item \textbf{Conclusion}: Interpret your results. Which data structure was faster? Did the results change from a real dataset to a random one? If so, why? How different was the heights of the different trees? Why?
 \end{itemize}
 
 Lastly, your paper MUST contain the following things:
