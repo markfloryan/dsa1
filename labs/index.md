@@ -15,9 +15,9 @@ CS2501 - Data Structures and Algorithms I
 
 - [Lab 5](./lab05 - StacksAndQueues/lab05.pdf): Stacks and Queues
 
-- [Lab 6](./lab06 - Concurrency/lab06.pdf): Concurrency in Java
+- [Lab 6](./lab06 - Trees/lab06.pdf): BST and AVL Trees
 
-- [Lab 7](./lab07 - Trees/lab07.pdf): BST and AVL Trees
+- [Lab 10](./lab10 - Concurrency/lab10.pdf): Concurrency in Java
 
 
 <a name="other"></a>Other Useful Stuff
