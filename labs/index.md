@@ -17,6 +17,8 @@ CS2501 - Data Structures and Algorithms I
 
 - [Lab 6](./lab06 - Trees/lab06.pdf): BST and AVL Trees
 
+- [Lab 7](./lab07 - Sorting/lab07.pdf): Sorting Algorithms
+
 - [Lab 10](./lab10 - Concurrency/lab10.pdf): Concurrency in Java
 
 
