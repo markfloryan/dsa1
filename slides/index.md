@@ -15,6 +15,8 @@ CS2501 - Data Structures and Algorithms I
 
 - [Trees](./04-trees.html): Tree data structures, including BST and AVL
 
+- [Sorting](./05-sorting.html): Sorting algorithms, including bubble, insertion, mergesort, and quicksort
+
 - [Concurrency](./08-concurrency.html): Some simple multi-threading in Java.
 
 <a name="introduction"></a>Other
