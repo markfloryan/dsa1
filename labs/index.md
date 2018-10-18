@@ -19,6 +19,8 @@ CS2501 - Data Structures and Algorithms I
 
 - [Lab 7](./lab07 - Sorting/lab07.pdf): Sorting Algorithms
 
+- [Lab 8](./lab08 - Hashing/lab08.pdf): Hash Tables and a word puzzle solver
+
 - [Lab 10](./lab10 - Concurrency/lab10.pdf): Concurrency in Java
 
 

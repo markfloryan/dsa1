@@ -594,7 +594,7 @@ private boolean find(T data, BSTNode< T > curNode) {
     return find(data, curNode.left);
   
   else if (data.compareTo(curNode.data) > 0) 
-    eturn find(data, curNode.right);
+    return find(data, curNode.right);
   
   else
     return true; 
