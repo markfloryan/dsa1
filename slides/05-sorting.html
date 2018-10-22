@@ -180,7 +180,9 @@ Collections.sort(p);
 <section data-markdown><script type="text/template">
 ### Bubble Sort: Overall
 
-- __Overall Idea:__ For each position in the list i, go through every other position in the list after i and find the smallest thing to place at i.
+- __Overall Idea:__ For each pair of adjacent elements, swap the bigger one up one position if necessary so that the largest item "bubbles" to the highest index in the list. Repeat __n__ times.
+
+![Bubble](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 </script></section>
 
 <section data-markdown><script type="text/template">
@@ -189,9 +191,9 @@ Collections.sort(p);
 <pre><code class="hljs" data-trim contenteditable>
 bubbleSort(List list):
   for each i from 0 to n-2
-    for each j from i+1 to n-1
-      if list[i] > list[j]
-        swap list[i] and list[j]
+    for each j from 0 to n-i-1
+      if list[j] > list[j+1]
+        swap list[j] and list[j+1]
 </code></pre>
 </script></section>
 
