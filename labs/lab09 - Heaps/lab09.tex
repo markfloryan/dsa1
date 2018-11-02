@@ -1,0 +1,273 @@
+\documentclass[paper=a4, fontsize=11pt, parskip=full]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+
+\usepackage{graphicx}
+
+\usepackage{float}
+
+%Preamble
+\usepackage{listings}
+\usepackage{color}
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+
+\lstset{language=Java,
+basicstyle=\ttfamily,
+keywordstyle=\color{javapurple}\bfseries,
+stringstyle=\color{javared},
+commentstyle=\color{javagreen},
+morecomment=[s][\color{javadocblue}]{/**}{*/},
+numbers=left,
+numberstyle=\tiny\color{black},
+stepnumber=2,
+numbersep=10pt,
+tabsize=4,
+showspaces=false,
+showstringspaces=false}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{
+\normalfont \normalsize
+\textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Lab 09 - Heaps \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Dr. Mark R. Floryan} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	Pre-Lab
+%----------------------------------------------------------------------------------------
+
+\section{Pre-Lab}
+
+This week, you will be building a custom MinHeap class as discussed in class. You will use this heap to implement an efficient HeapSort algorithm. 
+
+\begin{enumerate}
+	\item Download the provided \href{https://markfloryan.github.io/dsa1/labs/lab09%20-%20Heaps/code/heaps.zip}{starter code}.
+	\item Implement the MinHeap.java class.
+	\item Implement the heapSort() method.
+	\item Test the correctness of your hash table using the provided tester.
+	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab09%20-%20Heaps/code/heaps.zip}{heaps.zip}
+	\item \textbf{FILES TO SUBMIT:} lab09.zip
+\end{enumerate}
+
+%------------------------------------------------
+
+\subsection{MinHeap.java}
+
+First, you will be implementing the MinHeap.java class, which implements the following PriorityQueue interface:
+
+\begin{lstlisting}
+public interface PriorityQueue<T extends Comparable<T>> {
+	
+	/* places the value T onto the heap */
+	public void push(T data);
+
+	/* removes and returns the item with next priority
+     * (i.e., lowest value)
+	 */
+	public T poll();
+
+	/* returns the next item to be polled, without removing */
+	public T peek();
+
+	/* returns number of elements on the heap */
+	public int size();
+	
+}
+
+\end{lstlisting}
+
+Your MinHeap class will also have a few extra supporting methods necessary to make it work. You heap MUST be a heap implementation, as discussed in class, using an array (no linked list / tree like implementations). The other methods necessary are: 
+
+\begin{lstlisting}
+// Constructs a heap from the given array
+// pre-filled with the data in the heap
+// data may need to be restructured
+public MinHeap(ArrayList<T> data);
+
+// Turns the internal array without
+// heap ordering property into the
+// equivalent heap with the ordering property
+private void heapify();
+
+// Percolate the item at index up until
+// the ordering property is restored
+private void percolateUp(int index);
+
+// Percolate the item at index down until
+// the ordering property is restored.
+private void percolateDown(int index);
+\end{lstlisting}
+
+Once you are done, you can test your implementation using the provided tester. Remember that the tester is NOT meant to be a thorough check of your implementation. You should still write your own tests to make sure that it works. Also note that not all the tests will pass at this point, because you haven't implemented HeapSort yet (see next section).
+
+\subsection{Heap Sort}
+
+Heap Sort is an algorithm that sorts a list using the methods from a MinHeap or MaxHeap. In the provided tester file, you'll find a method called heapSort(). Implement this method so that it uses the MinHeap you built to sort the provided list of numbers. Once you are done, you can re-run the provided tester to confirm that it seems to work.
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	In-Lab
+%----------------------------------------------------------------------------------------
+\newpage
+\section{In-Lab}
+
+The goal of this in-lab is to continue practicing with heaps in a laid back environment:
+
+\begin{enumerate}
+	\item Get into small groups of two
+	\item The TAs will present you with some programming challenges regarding heaps. These will not be graded, but you are required to attend and to participate.
+	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
+	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
+\end{enumerate}
+
+\subsection{Heaps}
+
+The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these.
+
+\begin{enumerate}
+	\item Add a new method to your MinHeap called updatePriority(T oldElement, T newElement). This method should find oldElement in the heap, update it to be set to newElement instead, and then make sure the heap ordering property still holds.
+	\item Write a method called computeProduct(ArrayList<Integer> list, int i). This method should return the product of the smallest $i$ elements in the given list. Note that list is not provided to you in sorted order. Use a MinHeap to solve this problem.
+	\item If you have extra time, try tackling \href{https://www.hackerearth.com/practice/data-structures/trees/heapspriority-queues/practice-problems/algorithm/haunted/}{this problem}.
+\end{enumerate}
+
+If you have coded up all of these and they work, then show the TA and you may leave early.
+
+
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	Post-Lab
+%----------------------------------------------------------------------------------------
+\newpage
+\section{Post-Lab}
+
+The goal of this post-lab is to produce a report analyzing the performance of a min-heap. 
+
+You will perform some experiment(s) by doing the following:
+
+\begin{enumerate}
+	\item Implement a priority queue naively by using one of our other data structures (e.g., list, tree, or hash table). You may use Java's built in data structures to make this easier if you'd like.
+	\item Run an experiment where you test the performance of your MinHeap (from prelab) to the naive implementation of the priority queue. Make sure you test the methods push(), poll(), and peek(). Which operations are slower? Which are faster? Do the results you see match the theoretical (i.e., big-theta runtimes) for the respective methods? Why or why not?
+	\item \textbf{FILES TO DOWNLOAD:} None
+	\item \textbf{FILES TO SUBMIT:} PostLabNine.pdf
+\end{enumerate}
+
+\subsection{Report}
+
+Summarize your experiment and your findings in a report. Make sure to adhere to these general guidelines:
+
+\begin{itemize}
+	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
+	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
+	\item You should write your report as if it is original novel research.
+	\item The grammar / spelling / professionalism of this document should be sound.
+	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
+\end{itemize}
+
+In addition to the general guidelines above, please follow the following rough outline for your paper:
+
+\begin{itemize}
+	\item \textbf{Abstract}: Summarize the entire document in a single paragraph
+	\item \textbf{Introduction}: Present the problem, and provide details regarding the data structues you implemented.
+	\item \textbf{Methods}: Describe your methodology for collecting data. How many executions, which inputs, when did the timer start/stop, etc.
+	\item \textbf{Results}: Describe your results from your execution runs.
+	\item \textbf{Conclusion}: Interpret your results. Which algorithm/data structure was fastest in each situation? If so, why? Does the performance you see match the theoretical runtimes of the algorithms? Why or why not?
+\end{itemize}
+
+Lastly, your paper MUST contain the following things:
+
+\begin{itemize}
+	\item A table (methods section) summarizing the experiments and how many execution runs were done in each group.
+	\item At least one table (results section) summarizing the results of all of your experiments.
+	\item Some kind of graph visualizing the results of the table from the previous bullet.
+\end{itemize}
+
+%------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
+
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+
+
+%WORKS CITED:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------

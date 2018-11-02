@@ -21,6 +21,8 @@ CS2501 - Data Structures and Algorithms I
 
 - [Lab 8](./lab08 - Hashing/lab08.pdf): Hash Tables and a word puzzle solver
 
+- [Lab 9](./lab09 - Heaps/lab09.pdf): MinHeap and Heap Sort
+
 - [Lab 10](./lab10 - Concurrency/lab10.pdf): Concurrency in Java
 
 
