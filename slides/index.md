@@ -17,6 +17,8 @@ CS2501 - Data Structures and Algorithms I
 
 - [Sorting](./05-sorting.html): Sorting algorithms, including bubble, insertion, mergesort, and quicksort
 
+- [Hashing](./06-hashing.html): Hash tables and collision resolution strategies.
+
 - [Concurrency](./08-concurrency.html): Some simple multi-threading in Java.
 
 <a name="introduction"></a>Other
