@@ -19,6 +19,8 @@ CS2501 - Data Structures and Algorithms I
 
 - [Hashing](./06-hashing.html): Hash tables and collision resolution strategies.
 
+- [Priority Queus](./07-priorityqueues.html): Priority queues, min-heaps, and heapsort.
+
 - [Concurrency](./08-concurrency.html): Some simple multi-threading in Java.
 
 <a name="introduction"></a>Other
