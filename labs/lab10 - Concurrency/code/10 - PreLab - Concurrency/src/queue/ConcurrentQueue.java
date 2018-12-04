@@ -33,7 +33,7 @@ public class ConcurrentQueue<T> implements IQueue<T>{
 	}
 	
 	/**
-	 * Simply remove data from the head of the list, throw exception if list is empty.
+	 * Simply remove data from the head of the list
 	 */
 	public T dequeue(){	
 		

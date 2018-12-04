@@ -16,7 +16,6 @@ public interface IQueue<T> {
 	/**
 	 * Removes the data at the front of the queue and returns the removed value
 	 * @return the data removed from the front of the queue
-	 * @throws EmptyQueueException if attempting to dequeue from a queue of size 0
 	 */
 	public T dequeue();
 	
