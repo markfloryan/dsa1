@@ -9,7 +9,7 @@ CS2501 - Data Structures and Algorithms I
 | Java Data Types | <a href="JavaDataTypes/power.pdf">Intro and Power Function</a> | |
 | Arrays | | |
 | Ifs | | |
-| Loops | | |
+| Loops | <a href="Loops/roomba.pdf">Roomba Simulator</a> | <a href="Loops/roombaAnalysis.pdf">Roomba Analysis</a> |
 | References | | |
 | Methods / Parameters | | |
 | Objects / Classes | <a href="ObjectsAndClasses/blackjack.pdf">Blackjack Implementation</a> | <a href="ObjectsAndClasses/blackjackAnalysis.pdf">Blackjack Analysis</a> |

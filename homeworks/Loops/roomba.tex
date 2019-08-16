@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 02 - Roomba Simulator \\ % The assignment title
+\huge Loops - Roomba Simulator \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -84,17 +84,17 @@ showstringspaces=false}
 \maketitle % Print the title
 
 %----------------------------------------------------------------------------------------
-%	Pre-Lab
+%	Roomba
 %----------------------------------------------------------------------------------------
 
-\section{Pre-Lab}
+\section{Summary}
 
-A while ago, I purchased a \href{https://www.irobot.com/For-the-Home/Vacuuming/Roomba.aspx}{Roomba}, a small round robot that scurries along my floor and vacuums. The robot is quite cute, and I always wondered precisely how the algorithm for determining its actions worked. For this lab, you will write some code that controls a virtual Roomba vacuum robot, and try to construct an algorithm that best cleans the floors of some virtual rooms. Your summary:
+A while ago, I purchased a \href{https://www.irobot.com/For-the-Home/Vacuuming/Roomba.aspx}{Roomba}, a small round robot that scurries along my floor and vacuums. The robot is quite cute, and I always wondered precisely how the algorithm for determining its actions worked. For this homework, you will write some code that controls a virtual Roomba vacuum robot, and try to construct an algorithm that best cleans the floors of some virtual rooms. Your summary:
 
 \begin{enumerate}
 	\item Download the starter code and import the project into Eclipse.
 	\item Implement the makeMove method in the Roomba class.
-	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab02%20-%20Roomba/code/Roomba.zip}{Roomba.zip}
+	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/homeworks/Loops/code/Roomba.zip}{Roomba.zip}
 	\item \textbf{FILES TO SUBMIT:} MyRoomba.java
 \end{enumerate}
 
@@ -102,7 +102,7 @@ A while ago, I purchased a \href{https://www.irobot.com/For-the-Home/Vacuuming/R
 
 \subsection{Download and Review Contents of Starter Code}
 
-You can download the starter code for this project from the course repository \href{https://markfloryan.github.io/dsa1/labs/lab02%20-%20Roomba/code/Roomba.zip}{here}. Once you have done so, you should import the project into Eclipse.
+You can download the starter code for this project from the course repository \href{https://markfloryan.github.io/dsa1/homeworks/Loops/code/Roomba.zip}{here}. Once you have done so, you should import the project into Eclipse.
 
 Importing a project in Eclipse is easy. First, unzip the starter code somewhere on your machine. Then, within Eclipse, simply navigate to the \textbf{File --> Import} menu. Several options will appear next. Select \textbf{Existing Projects into Workspace} and click \emph{Next}. Another dialog will appear asking you for the path to the folder where the project exists. Press \textbf{Browse} next to \textbf{Select Root Directory} and navigate to the project folder. Then, simply click \textbf{Finish} and you should see the project appear within the left hand bar of Eclipse.
 
@@ -151,7 +151,7 @@ You should use the variables listed above in order to make decisions about what 
 
 \subsection{Requirements}
 
-For submitting this pre-lab, your makeMove() method must adhere to the following requirements:
+For submitting this homework, your makeMove() method must adhere to the following requirements:
 
 \begin{itemize}
 	\item you MUST have at least three if statements in your method.
@@ -159,96 +159,8 @@ For submitting this pre-lab, your makeMove() method must adhere to the following
 	\item you MUST use each of the sensor variables at least once in your code.
 	\item your Roomba must ALWAYS clean more of the room than the simple Roomba we provided with the starter code.
 \end{itemize}
-%----------------------------------------------------------------------------------------
-%	In-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{In-Lab}
-
-The goal of this in-lab is to continue improving your coding abilities with some more programming challenges. As before, you will:
-
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with various programming challenges. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Programming Challenges}
-
-The TAs will lead you in attempting to complete the following challenges:
-
-\begin{enumerate}
-	\item Given a two-dimensional square array of integers, return true iff the array is a \href{https://en.wikipedia.org/wiki/Magic_square}{Magic Square}
-	\item Write a program that given an integer $i$, prints out the i'th row of \href{https://en.wikipedia.org/wiki/Pascal%27s_triangle}{Pascal's Triangle}.
-	\item You are given a String containg numbers, letters, and question marks. Write a method that returns true iff there is at least one pair of numbers that adds up to 10 AND every pair of numbers that adds up to 10 contains exactly three question marks in between those numbers. For example, "acc?7??sss?3rr1??????5" would return true, and "aa6?9" would return false.
-	\item You are given a balance scale and three integer values: the weight currently on the left of the scale, the weight currently on the right of the scale, and an array of available weights that can still be placed on either side. Write a method that returns true iff the scale can be balanced by placing no more than 2 of the available weights onto the scale.
-	\item \textbf{Bonus Challenge:} Solve the problem found \href{https://projecteuler.net/problem=14}{here}.
-\end{enumerate}
-
-%------------------------------------------------
 
 
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to write a report comparing two distinct strategies for your Roomba simulator.
-
-\begin{enumerate}
-	\item Construct at least two distinct strategies for your makeMove() method.
-	\item Run an experiment comparing how well each strategy cleans various rooms.
-	\item Write a report summarizing and analyzing your findings.
-	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabTwo.pdf
-\end{enumerate}
-
-\subsection{Performing an Experiment}
-
-Your first task is to write \textbf{two unique} makeMove() methods that incorporate different strategies for cleaning the rooms. You should be able to argue that the two strategies are significantly different AND that it is not obvious to you which is better. You should be geniuinely curious which approach will succeed.
-
-You should then plan to execute your two Roombas several rooms, given the following constraints:
-
-\begin{itemize}
-	\item You will use four total room configurations. two of the rooms will be smaller in size and two will be larger in size (you may choose the exact sizes).
-	\item For each set of two above, one will have a small number of obstacles generated, and one will have a large number of obstacles generated.
-	\item You should run each Roomba in each of the four configurations at least 15 times each. That is $15 * 4 = 60$ total executions minimum.
-	\item For each room configuration, you should average the percentage of the room cleaned for each Roomba strategy.
-\end{itemize}
-
-\subsection{Report}
-
-Summarize your experiment and your findings in a report. Make sure to adhere to these general guidelines:
-
-\begin{itemize}
-	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://github.com/markfloryan/dsa1/blob/master/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
-	\item You should write your report as if it is original novel research.
-	\item The grammar / spelling / professionalism of this document should be sound.
-	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
-\end{itemize}
-
-In addition to the general guidelines above, please follow the following rough outline for your paper:
-
-\begin{itemize}
-	\item \textbf{Abstract}: Summarize the entire document in a single paragraph/
-	\item \textbf{Introduction}: Present the problem, and provide details regarding the two strategies you implemented.
-	\item \textbf{Methods}: Describe your methodology for collecting data. How many rooms, how many executions, how you averaged things, etc.
-	\item \textbf{Results}: Describe your results from your execution runs.
-	\item \textbf{Conclusion}: Interpret your results. Which strategy was better? Why was it better? Were you surprised? Was one strategy better in some situations and not in others? Why do you think that is? Notice that I'm not looking for a particular answer here. Show me that you can interpret what happened when you ran your code.
-\end{itemize}
-
-Lastly, your paper MUST contain the following things:
-
-\begin{itemize}
-	\item A table (methods section) summarizing the different experimental groups and how many execution runs were done in each group.
-	\item A table (results section) summarizing each experimental group and the average percent cleaned for each (as well as any other data you decided to collect).
-	\item Some kind of graph visualizing the results of the table from the previous bullet.
-\end{itemize}
-
-%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 
