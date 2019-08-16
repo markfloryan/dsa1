@@ -11,7 +11,7 @@ CS2501 - Data Structures and Algorithms I
 | Ifs | | |
 | Loops | <a href="Loops/roomba.pdf">Roomba Simulator</a> | <a href="Loops/roombaAnalysis.pdf">Roomba Analysis</a> |
 | References | | |
-| Methods / Parameters | | |
+| Methods / Parameters | <a href="MethodsAndParams/sixFunctions.pdf">Six Functions</a> | |
 | Objects / Classes | <a href="ObjectsAndClasses/blackjack.pdf">Blackjack Implementation</a> | <a href="ObjectsAndClasses/blackjackAnalysis.pdf">Blackjack Analysis</a> |
 | Interfaces / ADTs | | |
 | Vectors | | |
