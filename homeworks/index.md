@@ -30,7 +30,7 @@ CS2501 - Data Structures and Algorithms I
 | Hash Tables | | |
 | Priority Queues | | |
 | Heap Sort | | |
-| Concurrency | | |
+| Concurrency | <a href="Concurrency/concurrency.pdf">Concurrent Queue Implementation</a> | <a href="Concurrency/concurrencyAnalysis.pdf">Concurrent Queue Analysis</a> |
 | Exceptions | | |
 
 

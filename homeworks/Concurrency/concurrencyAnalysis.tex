@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 10 - Concurrency \\ % The assignment title
+\huge Concurrency - Concurrency Analysis \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -83,93 +83,15 @@ showstringspaces=false}
 
 \maketitle % Print the title
 
-%----------------------------------------------------------------------------------------
-%	Pre-Lab
-%----------------------------------------------------------------------------------------
 
-\section{Pre-Lab}
-
-This week, you will be implementing a simple concurrent queue. For this assignment, we are going to focus on correctness (i.e., the queue must work with multiple threads without crashing). Optimizing the speed of your concurrent queue is optional.
-
-\begin{enumerate}
-	\item Download the provided starter code
-	\item Implement the ConcurrentQueue class
-	\item Run the main in MainTester.java to ensure your queue works correctly
-	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab10\%20-\%20Concurrency/code/concurrency.zip}{concurrency.zip}
-	\item \textbf{FILES TO SUBMIT:} lab10.zip
-\end{enumerate}
-
-%------------------------------------------------
-
-\subsection{ConcurrentQueue.java}
-
-To begin, implement the *ConcurrentQueue* class inside the ConcurrentQueue.java file. The methods you are responsible for are listed below. This Queue \textbf{must be a linked-list based queue}. You may use Java's built-in Linked List (import java.util.LinkedList) or you may use your own implementation from the previous labs.
-
-\begin{lstlisting}
-	public class Queue<T>{
-		public Queue();
-
-		public int size();
-
-		public void enqueue(T data);
-
-		public T dequeue();
-	}
-\end{lstlisting}
-
-Your class must be alterable by different threads. Thus, you should protect the fields (head, tail, etc.) of your linked list from being corrupted by multiple threads accessing the queue at once. For this lab, we care about *correctness* (i.e., the queue works as intended with multiple threads even if it could be optimized to run faster).
-
-\subsection{MainTester.java}
-
-You can test your code by running the main method in *MainTester.java*. This tester will first test your queue using a single thread and time the results. Then, the method will test your queue again using two threads and time the results again. Any errors that occur should be printed to the console. Make sure you run the tester multiple times. Race conditions can sometimes cause code to appear to work but not consistently.
-
-\subsection{OPTIONAL: Optimizing}
-
-Although we only care about correctness for this lab, if you are interested you should try to make your queue run as quickly as possible. What can you do to increase the degree to which multiple threads can use the queue in parallel? How fast can you make the concurrent test that we provided?
-
-When you are done, submit your entire project as a zip file to Collab.
-
-%------------------------------------------------
 
 
 %----------------------------------------------------------------------------------------
-%	In-Lab
+%	Analysis
 %----------------------------------------------------------------------------------------
-\newpage
-\section{In-Lab}
+\section{Summary}
 
-The goal of this in-lab is to continue practicing with concurrent programming in a laid back environment. As usual, you will:
-
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with some programming challenges regarding threads. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Concurrency Coding Challenges}
-
-The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these.
-
-\begin{enumerate}
-	\item Write a program that performs matrix multiplication in parallel. If you tweak the number of threads and what each thread does, How fast can you make the program run?
-	\item You want to write a program that accepts a list of numbers and filters out all of the values that are outside of a certain range. Write a multi-threaded program that does this. How fast can you make the code run?
-	\item Write a threaded program that simulates a rock, paper, scissors tournament. Given a number of competitors, pair them off and have each compete (randomly select RPS for each and see who wins). Then pair off the winners and repeat until you have a champion. Your competitors will simply be numbered $1$ through $n$. Use multithreading to speed up your program. How fast can you make your code run?
-\end{enumerate}
-
-If you have coded up all three of these and they work, then show the TA and you may leave early.
-
-
-%------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to write a report analyzing the efficiency of your concurrent queue from the pre-lab. Specifically, we are interested in how efficient your queue is compared to a sequential queue as you increase the number of items being added / removed and as you increase the number of threads accessing the queue in parallel.
+The goal of this homework is to write a report analyzing the efficiency of your concurrent queue. Specifically, we are interested in how efficient your queue is compared to a sequential queue as you increase the number of items being added / removed and as you increase the number of threads accessing the queue in parallel.
 
 You will perform an experiment by doing the following:
 
@@ -179,7 +101,7 @@ You will perform an experiment by doing the following:
 	\item Do a second experiment where you increase the number of threads accessing the concurrent queue at once. Time how long each test case takes to complete. For this test, keep the number of insertions / deletes constant.
 	\item Write a report summarizing and analyzing your findings
 	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabSix.pdf
+	\item \textbf{FILES TO SUBMIT:} ConcurrentQueueAnalysis.pdf
 \end{enumerate}
 
 \subsection{Report}
@@ -188,7 +110,7 @@ Summarize your experiment and your findings in a report. Make sure to adhere to 
 
 \begin{itemize}
 	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://github.com/markfloryan/dsa1/blob/master/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
+	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/homeworks/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
 	\item You should write your report as if it is original novel research.
 	\item The grammar / spelling / professionalism of this document should be sound.
 	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
