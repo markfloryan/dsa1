@@ -1,9 +1,37 @@
 CS2501 - Data Structures and Algorithms I
 ===============================
 
-<a name="introduction"></a>Labs
+<a name="introduction"></a>Currently Released Homeworks
 --------------------------------------- 
 
+| Module | Homework 1 | Homework 2 |
+|-----------------|-----------|-----------|
+| Java Data Types | <a href="JavaDataTypes/power.pdf">Intro and Power Function</a> | |
+| Objects / Classes | | |
+| Arrays | | |
+| Ifs | | |
+| References | | |
+| Loops | | |
+| Interfaces / ADTs | | |
+| Inheritance | | |
+| Methods / Parameters | | |
+| Recursion | | |
+| Exceptions | | |
+| Concurrency | | |
+| Vectors | | |
+| Linked Lists | | |
+| Queues | | |
+| Stacks | | |
+| Priority Queues | | |
+| Heap Sort | | |
+| Hash Tables | | |
+| BST | | |
+| AVL | | |
+| Bubble Sort | | |
+| Insertion Sort | | |
+| Merge Sort | | |
+| Quick Sort | | |
+| Big-Oh | | |
 
 - [Lab 1](./lab01 - Java/lab01.pdf): Introduction to Java / Java Warmup
 
@@ -24,6 +52,12 @@ CS2501 - Data Structures and Algorithms I
 - [Lab 9](./lab09 - Heaps/lab09.pdf): MinHeap and Heap Sort
 
 - [Lab 10](./lab10 - Concurrency/lab10.pdf): Concurrency in Java
+
+
+<a name="other"></a>Upcoming Homeworks (feel free to get ahead if you'd like)
+---------------------------------------
+
+
 
 
 <a name="other"></a>Other Useful Stuff

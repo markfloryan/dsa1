@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize 
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 01 - Introduction to Java and Eclipse \\ % The assignment title
+\huge Java Data Types - Introduction to Eclipse and Power Function \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -84,12 +84,12 @@ showstringspaces=false}
 \maketitle % Print the title
 
 %----------------------------------------------------------------------------------------
-%	Pre-Lab
+%	Power Function
 %----------------------------------------------------------------------------------------
 
-\section{Pre-Lab}
+\section{Summary}
 
-The goal of this prelab is to setup your coding environment in eclipse, and to write a very simple program. You will do the following:
+The goal of this homework is to setup your coding environment in eclipse, and to write a very simple program. You will do the following:
 
 \begin{enumerate}
 	\item Download and install eclipse, setup a new project.
@@ -131,7 +131,7 @@ Your next task is create your first Java class. Right click on your project on t
 \label{fig:newclass}
 \end{figure}
 
-You are ready to begin coding. For this lab, you will only need the one class, and you can write all of your code in this area. To run your program, there is a small green bug icon at the top of the screen. 
+You are ready to begin coding. For this homework, you will only need the one class, and you can write all of your code in this area. To run your program, there is a small green bug icon at the top of the screen. 
 
 
 %------------------------------------------------
@@ -147,71 +147,6 @@ public static long power(int base, int exp);
 Your program should take in two numbers for the user. First, the base and second, the exponent. Then, your program should invoke the power method above and present the user (via the console) the value of base to the exponent power. You can assume that when we test your code, all inputs will fit inside of int types, and all correct answers will fit inside of long types. This method may be iterative or recursive, but \textbf{may not use any library functions such as Math.pow()}.
 
 
-%----------------------------------------------------------------------------------------
-%	In-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{In-Lab}
-
-The goal of this in-lab is to continue practicing writing some simple java code. You will do the following:
-
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with various programming challenges. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Programming Challenges}
-
-The TAs will lead you in attempting to write the following methods:
-
-\begin{enumerate}
-	\item Given a list, print out the even numbered values only
-	\item Given a list, print out every other element
-	\item Given a list, print out only numbers that increase as you go
-	\item Given two lowercase strings (a-z characters only), determine if they are anagrams of one another.
-	\item Given the cost of a product $c$, and the amount a customer has paid $p$ (note $p >= c$), determine the exact coins (using quarters, dimes, nickels, and pennies) to give to produce the correct amount of change.
-		\begin{itemize}
-		\item If time remains, try to do each of these recursively instead of iteratively.
-		\end{itemize}
-	\item \textbf{Bonus Challenge}: Given the four corner points (x and y coordinates, given in clockwise order) of a polygon in two-dimensional space, and another fifth point, determine if the fifth point is inside the polygon created by the first four points.  
-\end{enumerate}
-
-%------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to continue practicing writing some simple java methods. You will do the following:
-
-\begin{enumerate}
-	\item Implement six methods shown below.
-	\item Implement a small program to allow a user to choose one of those methods to invoke.
-	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILE TO SUBMIT:} PostLabOne.java
-\end{enumerate}
-
-\subsection{PostLabOne.java}
-
-For this post-lab, you will implement six functions, as well as a small program that allows a user to select which method they'd like to test. You will start by implementing the following methods:
-
-\begin{enumerate}
-\item \textbf{max}: Accepts an array of integers as a parameter, and returns the largest integer among them.
-\item \textbf{min}: Accepts an array of integers as a parameter, and return the lowest integer among them.
-\item \textbf{average}: Accepts an array of integers as a parameter, and returns the average of the numbers as a double.
-\item \textbf{median}: Accepts an array of integers as a parameter, and returns the \href{https://en.wikipedia.org/wiki/Median}{median} of the numbers. \emph{Note that you can invoke your max and min function here to make this easier. You don't necessarily need to sort the data.} 
-\item \textbf{stddev}: Accepts an array of integers as a parameter, and return the \href{https://en.wikipedia.org/wiki/Standard_deviation}{standard deviation} of the numbers. \emph{Note that you can invoke your average method here.}
-\item \textbf{mode}: Accepts and array of integers as a parameter, and returns the most commonly occurring value among them. \emph{If there is more than one mode, you may return any of them.}
-\end{enumerate}
-
-Once these methods are complete, you should write a program that asks the user to input a number one through six. If the user doesn't enter a valid number, the program exits. If the user enters a valid number one through six, then they are prompted to enter seven integers. Those seven integers are then given to the corresponding method above (1 = max, 2 = min, 3 = average, 4 = median, 5 = stddev, 6 = mode) and the answer (a single value) is printed to the console. The program then exits.
-
-You should submit one file for this lab, \textbf{PostLabOne.java}.
 
 %------------------------------------------------
 
