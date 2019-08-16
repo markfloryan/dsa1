@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 04 - Linked Lists \\ % The assignment title
+\huge Linked Lists - Linked List Analysis \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -83,195 +83,27 @@ showstringspaces=false}
 
 \maketitle % Print the title
 
-%----------------------------------------------------------------------------------------
-%	Pre-Lab
-%----------------------------------------------------------------------------------------
-
-\section{Pre-Lab}
-
-This week, you will be writing a generic doubly-linked list data structure in Java. Your summary:
-
-\begin{enumerate}
-	\item Download the starter code and import the project into Eclipse
-	\item Implement the LinkedList.java class
-	\item Verify your implementation using the provided tester class
-	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab04%20-%20LinkedLists/code/linkedlists.zip}{linkedLists.zip}
-	\item \textbf{FILES TO SUBMIT:} lab04.zip
-\end{enumerate}
-
-%------------------------------------------------
-
-\subsection{ListIterator.java}
-
-Once you've imported the provided code into Eclipse, you may want to start on ListIterator.java (though you don't have to). A ListIterator is an object that points to one element in your linked list, and provides methods to grab the element at that index, move the iterator forward one position, backward one position, etc. The provided tester uses this iterator class to test your code, and so it much be implemented correctly. The methods you will be asked to implement are:
-
-\begin{lstlisting}
-	/**
-	 * These two methods tell us if the iterator has run off
-	 * the list on either side
-	 */
-	public boolean isPastEnd();
-	public boolean isPastBeginning();
-
-	/**
-	 * Get the data at the current iterator position
-	 */
-	public T value();
-
-	/**
-	 * These two methods move the cursor of the iterator
-	 * forward / backward one position
-	 */
-	public void moveForward();
-	public void moveBackward();
-\end{lstlisting}
-
-\subsection{LinkedList.java}
-
-Next, implement all of the methods in LinkedList.java. This class will implement the provided List interface, which is duplicated for your convenience here. Your task is to implement each of these methods.
-
-\begin{lstlisting}
-public interface List<T> {
-
-	/**
-	 * Returns the size of this list, i.e., the number
-	 * of nodes currently between the head and tail
-	 * @return
-	 */
-	public int size();
-
-	/**
-	 * Clears out the entire list
-	 */
-	public void clear() ;
-
-	/**
-	 * Inserts new data at the end of the
-	 * list (i.e., just before the dummy tail node)
-	 * @param data
-	 */
-	public void insertAtTail(T data);
-
-	/**
-	 * Inserts data at the front of the
-	 * list (i.e., just after the dummy head node
-	 * @param data
-	 */
-	public void insertAtHead(T data);
-
-	/**
-	 * Inserts node such that index becomes the
-	 * position of the newly inserted data
-	 * @param data
-	 * @param index
-	 */
-	public void insertAt(int index, T data);
-
-	public T removeAtTail();
-
-	public T removeAtHead();
-
-	/**
-	 * Returns index of first occurrence of
-	 * the data in the list, or -1 if not present
-	 * @param data
-	 * @return
-	 */
-	public int find(T data);
-
-	/**
-	 * Returns the data at the given index, null if
-	 * anything goes wrong (index out of bounds, empty list, etc.)
-	 * @param index
-	 * @return
-	 */
-	public T get(int index);
-}
-\end{lstlisting}
-
-In addition, there are a few Linked List specific methods that you need to implement. They are all of the methods that involve a ListIterator in some way. The are enumerated below:
-
-\begin{lstlisting}
-	/**
-	 * Inserts data after the node pointed to by iterator
-	 */
-	public void insert(ListIterator<T> it, T data);
-
-	/**
-	 * Remove based on Iterator position
-	 * Sets the iterator to the node AFTER the one removed
-	 */
-	public T remove(ListIterator<T> it);
-
-	/* Return iterators at front and end of list */
-	public ListIterator<T> front();
-	public ListIterator<T> back();
-\end{lstlisting}
-
-\subsection{Testing Your Implementation}
-
-Once you implement this methods, you can test them by running the main method in the provider ListTester.java class. This simple tester will execute the methods in your list and compare them to those in Java's built in LinkedList to make sure the results are as expected.
-
-One strategy might be to implement your linked list methods in the order that they are tested. That way, you can see the tester say "this method is correct" before moving on to the next one.
-
-Notice that we expect your Linked List to be a generic class, meaning any type of Object can be stored within your Linked List.
-
-%------------------------------------------------
 
 
 %----------------------------------------------------------------------------------------
-%	In-Lab
+%	Analysis
 %----------------------------------------------------------------------------------------
 \newpage
-\section{In-Lab}
+\section{Summary}
 
-The goal of this in-lab is to continue practicing with Linked Lists in a laid back environment. As usual, you will:
-
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with some programming challenges regarding Linked Lists. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Linked List Coding Challenges}
-
-The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these.
-
-\begin{enumerate}
-	\item Write a method in the LinkedList class called reverse(). This method should completely reverse the Linked List so that the first element is now the last, the second is second to last, etc. Make sure to adjust the head and tail references as well.
-	\item Write the find(T itemToFind) method for a Linked List, but write it \textbf{recursively}.
-	\item Write a small code segment that takes Linked List and splits into two Linked Lists, with half the elements in one, and the other half in the other. If the number of elements is odd, then the extra element should go in the first list.
-	\item Write a method, called removeDuplicates(), for a Linked List the assumes the list is sorted in increasing order, and removes all duplicates from the list. You may only traverse through the list once.
-	\item Write a method called merge(ListNode a, ListNode b) that takes pointers to the head of two Linked Lists (a and b) that are each sorted in increasing order. The method should combine a and b to create one long list that is in sorted order. You may not create any additional List Nodes in your method.
-	\item Suppose you try to print out your Linked List and the code is taking a very long time. You wonder if the list has a loop in it or if the list is just very long. Write a method that determines whether or not a Linked List is actually a loop or not. The method should return a boolean.
-
-
-\end{enumerate}
-
-
-%------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to write a report comparing the runtimes of the various methods of your LinkedList class. The requirements for this post-lab are VERY simular to last week.
+The goal of this homework is to write a report comparing the runtimes of the various methods of your LinkedList class. The requirements for this report are VERY simular to the previous reports.
 
 \begin{enumerate}
 	\item Write some test code to time the various methods of your Linked List
 	\item Run a small experiment timing each method
 	\item Write a report summarizing and analyzing your findings
 	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabFour.pdf
+	\item \textbf{FILES TO SUBMIT:} LinkedListAnalysis.pdf
 \end{enumerate}
 
 \subsection{Timing Your Code}
 
-For this postlab, we'd like you to write a tester that executes each of your methods in your Linked List and times how long each takes. We are doing this to gain some intuition about which operations are slow and which operations are fast. You should consider the following when timing your code:
+For this homework, we'd like you to write a tester that executes each of your methods in your Linked List and times how long each takes. We are doing this to gain some intuition about which operations are slow and which operations are fast. You should consider the following when timing your code:
 
 \begin{itemize}
 	\item Each method, if invoked only once, will run VERY quickly. Thus, instead we are going to invoke each method of our Linked List many times (you can adjust this number) to get a better measurement. We want the total time for each operation to be at least 1 second.
@@ -322,7 +154,7 @@ Summarize your experiment and your findings in a report. Make sure to adhere to 
 
 \begin{itemize}
 	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://github.com/markfloryan/dsa1/blob/master/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
+	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/homeworks/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
 	\item You should write your report as if it is original novel research.
 	\item The grammar / spelling / professionalism of this document should be sound.
 	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".

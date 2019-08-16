@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  25 SEP 2018 10:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 AUG 2019 11:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**lab04.tex
-(./lab04.tex
+**linkedlists.tex
+(./linkedlists.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -601,8 +601,8 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \f@ncyO@olf=\skip69
 \f@ncyO@orf=\skip70
 )
-(./lab04.aux)
-\openout1 = `lab04.aux'.
+No file linkedlists.aux.
+\openout1 = `linkedlists.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
@@ -619,12 +619,13 @@ LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 82.
 LaTeX Font Info:    Try loading font information for FML+futm on input line 82.
 
- (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutm.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmlfutm.fd
 File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
 )
 LaTeX Font Info:    ... okay on input line 82.
 LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 82.
 LaTeX Font Info:    Try loading font information for FMS+futm on input line 82.
+
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/fmsfutm.fd
 File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
@@ -697,10 +698,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 82.
 LaTeX Info: Redefining \pageref on input line 82.
 LaTeX Info: Redefining \nameref on input line 82.
-
-(./lab04.out) (./lab04.out)
 \@outlinefile=\write3
-\openout3 = `lab04.out'.
+\openout3 = `linkedlists.out'.
 
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 85.
 
@@ -756,60 +755,41 @@ Overfull \hbox (29.89105pt too wide) in paragraph at lines 184--185
  
  []
 
-[3] [4] [5] [6]
-LaTeX Font Info:    Try loading font information for TS1+futs on input line 277
-.
+[3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 226.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 226.
+ (./linkedlists.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 226.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 226.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/ts1futs.fd
-File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
-) [7]
-Overfull \hbox (63.84155pt too wide) in paragraph at lines 297--299
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
 
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 303.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 303.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 303.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 303.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 303.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 303.
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
- (./lab04.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
-Package rerunfilecheck Info: File `lab04.out' has not changed.
-(rerunfilecheck)             Checksum: 3C6776E147A059A47AD700ED457DDDB9;530.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
+Package rerunfilecheck Warning: File `linkedlists.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `linkedlists.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  103A5A19F31C46468D512712A987912A;248.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 226.
  ) 
 Here is how much of TeX's memory you used:
- 11244 strings out of 492995
- 173581 string characters out of 6132704
- 466560 words of memory out of 5000000
- 14450 multiletter control sequences out of 15000+600000
- 93378 words of font info for 101 fonts, out of 8000000 for 9000
+ 11116 strings out of 492995
+ 171992 string characters out of 6132704
+ 466476 words of memory out of 5000000
+ 14388 multiletter control sequences out of 15000+600000
+ 77573 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,51p,8816b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
-exlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/tex
+ 41i,12n,51p,8822b,1721s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2017/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/20
 17/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on lab04.pdf (9 pages, 101771 bytes).
+f-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on linkedlists.pdf (4 pages, 75221 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 155 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -16,7 +16,7 @@ CS2501 - Data Structures and Algorithms I
 | Interfaces / ADTs | | |
 | Vectors | | |
 | Generics | | |
-| Linked Lists | | |
+| Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistanalysis.pdf">Linked List Analysis</a> |
 | Stacks / Queues | | |
 | Big-Oh | | |
 | Recursion | | |
