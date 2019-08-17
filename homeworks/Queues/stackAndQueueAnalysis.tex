@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 05 - Stacks and Queues \\ % The assignment title
+\huge Queues - Stack and Queue Analysis \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -83,116 +83,15 @@ showstringspaces=false}
 
 \maketitle % Print the title
 
-%----------------------------------------------------------------------------------------
-%	Pre-Lab
-%----------------------------------------------------------------------------------------
-
-\section{Pre-Lab}
-
-This week, you will be writing two data structures. The first will be a \textbf{linked list based} queue, and the other will be an \textbf{array based} stack.
-
-\begin{enumerate}
-	\item Download the starter code and import the project into Eclipse
-	\item Implement the Queue.java class
-	\item Implement the Stack.java class
-	\item Verify your implementation using the provided tester class
-	\item \textbf{FILES TO DOWNLOAD:} stacksandqueues.zip
-	\item \textbf{FILES TO SUBMIT:} lab05.zip
-\end{enumerate}
-
-%------------------------------------------------
-
-\subsection{Queue.java}
-
-To begin, implement the *Queue* class inside the Queue.java file. The methods you are responsible for are listed below. This Queue \textbf{must be a linked-list based queue}. You may use Java's built-in Linked List (import java.util.LinkedList) or you may use your own implementation from the previous labs.
-
-\begin{lstlisting}
-	public class Queue<T>{
-		public Queue();
-
-		public int size();
-
-		public void enqueue(T data);
-
-		public T dequeue();
-	}
-\end{lstlisting}
-
-\subsection{Stack.java}
-
-Next, you will implement a basic stack in java. This stack \textbf{must be an array-based stack}. Thus, your stack must support the resizing of the capacity of the underlying array. You \textbf{may not use an instance of Vector} in order to accomplish this. Instead, your class must have a field that is the underlying array. We are doing this so that you are implementing both a stack, and also learning how vector is implemented at the same time.
-
-The methods you are responsible for are shown below:
-
-\begin{lstlisting}
-	public class Stack<T>{
-		// The fields of this stack are given to you as follows
-		private Object[] data;
-		private int size = 0;
-		private static final int INITIAL_CAPACITY = 100;
-
-		/* Constructors not shown. Are implemented for you. */
-
-		public void push(T data);
-
-		@SuppressWarnings("unchecked")
-		public T pop();
-
-		public int size();
-
-		public int capacity();
-
-		public void resize(int newCapacity);
-	}
-\end{lstlisting}
-
-\subsection{Testing and submitting}
-
-We are providing a tester class with a main function. This class will add and remove many random elements to your two data structures and check that they work correctly. The tester will output an error message if anything goes wrong.
-
-To submit, please zip up your entire project and submit on Collab.
-
-%------------------------------------------------
-
 
 %----------------------------------------------------------------------------------------
-%	In-Lab
+%	Summary
 %----------------------------------------------------------------------------------------
-\newpage
-\section{In-Lab}
+\section{Summary}
 
-The goal of this in-lab is to continue practicing with stacks and queues in a laid back environment. As usual, you will:
+\textbf{NOTE: This homework requires that you have a working implementation for the Stacks homework assignment as well as the Queues homework assignment. You must finish both those module homeworks before doing this assignment.}
 
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with some programming challenges regarding stacks and queues. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Stacks and Queues Coding Challenges}
-
-The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these.
-
-\begin{enumerate}
-	\item Implement a basic stack (push and pop) using two queues. How fast can you make each operation?
-	\item Implement a basic queue (enqueue and dequeue) using two stacks. How fast can you make each operation?
-	\item Suppose you want to write a queue, except every item contains a \emph{priority} value. Items of higher priority should be dequeue'd before others. Using a linked list, write the enqueue and dequeue functions for this kind of priority queue. What are the runtimes of your operations?
-	\item Implement a data structure that contains a single array, but within that array we store two stacks. The two stacks are not full until ALL of the underlying array is full (i.e., you cannot just partition the array into two halves).
-	\item In class, we discussed using a stack to implement a post-fix calculator. Given a post-fix expression as a string with spaces between tokens, write some code that computes the value of the expression using a stack.
-\end{enumerate}
-
-
-%------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to write a report comparing the efficiency of linked-list based queues to array-based stacks. Theoretically, the runtimes for all operations on both these data structures is constant time. So, it is ok that we are comparing stacks to queues here. What we are really interested in is how much the resize operation on the stack, which is linear time and should slow us down, affects the overall performance of the stack versus the queue.
+The goal of this homework is to write a report comparing the efficiency of linked-list based queues to array-based stacks. Theoretically, the runtimes for all operations on both these data structures is constant time. So, it is ok that we are comparing stacks to queues here. What we are really interested in is how much the resize operation on the stack, which is linear time and should slow us down, affects the overall performance of the stack versus the queue.
 
 You will perform an experiment by doing the following:
 
@@ -201,7 +100,7 @@ You will perform an experiment by doing the following:
 	\item Run a small experiment timing each method. Because these methods are very fast, you'll need to invoke each MANY times before you see a slow enough performance and be able to compare your findings.
 	\item Write a report summarizing and analyzing your findings
 	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabFive.pdf
+	\item \textbf{FILES TO SUBMIT:} stackAndQueueAnalysis.pdf
 \end{enumerate}
 
 For this experiment, you should time your stack and queue by calling each method $i$. You may play around with $i$ until you find a number that works well, but they should be the same for each method (e.g., don't execute enqueue $10^5$ times and push $10^7$ times). You should test the following methods:
@@ -224,7 +123,7 @@ Summarize your experiment and your findings in a report. Make sure to adhere to 
 
 \begin{itemize}
 	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://github.com/markfloryan/dsa1/blob/master/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
+	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/homeworks/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
 	\item You should write your report as if it is original novel research.
 	\item The grammar / spelling / professionalism of this document should be sound.
 	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".

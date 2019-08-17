@@ -17,7 +17,7 @@ CS2501 - Data Structures and Algorithms I
 | Vectors | | |
 | Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistsAnalysis.pdf">Linked List Analysis</a> |
 | Stacks | <a href="Stacks/stacks.pdf">Stack Implementation</a> | |
-| Queues | | |
+| Queues | <a href="Queues/queues.pdf">Queue Implementation</a> | <a href="Queues/stackAndQueueAnalysis.pdf">Comparison of Stacks and Queues</a> |
 | Big-Oh | | |
 | Recursion | | |
 | Binary Search Trees | | |
