@@ -15,9 +15,9 @@ CS2501 - Data Structures and Algorithms I
 | Objects / Classes | <a href="ObjectsAndClasses/blackjack.pdf">Blackjack Implementation</a> | <a href="ObjectsAndClasses/blackjackAnalysis.pdf">Blackjack Analysis</a> |
 | Interfaces / ADTs | | |
 | Vectors | | |
-| Generics | | |
 | Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistsAnalysis.pdf">Linked List Analysis</a> |
-| Stacks / Queues | | |
+| Stacks | <a href="Stacks/stacks.pdf">Stack Implementation</a> | |
+| Queues | | |
 | Big-Oh | | |
 | Recursion | | |
 | Binary Search Trees | | |
