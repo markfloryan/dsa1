@@ -3,7 +3,7 @@ CS 2501: Data Structures and Algorithms I
 
 [Main Logistics Page](./index.html)
 
-## Fall 2018
+## Fall 2019
 
 ### Instructors ###
 
@@ -11,11 +11,11 @@ CS 2501: Data Structures and Algorithms I
 
 ### Course Info ###
 
-- Lecture: M/W/F 12:00-12:50, Olsson Hall 011
+- Lecture: M/W/F 10:00-10:50, Thornton Hall E303
 - TAs and their office hours will be posted on the course Google Calendar (which is linked to via Collab); all office hours start the Sunday after classes start
-- Laboratory Meetings (all in Olsson 001):
-    - Section 201: Wednesday, 6:30 pm -- 7:45 pm
-    - Section 202: Thursday, 6:30 pm -- 7:45 pm
+- Laboratory Meetings (all in MEC 213):
+    - Section 101: Wednesday, 5:00 pm -- 6:15 pm
+    - Section 102: Thursday, 5:00 pm -- 6:15 pm
 
 **Course Description:** A second course in computing with an emphasis on foundational data structures and program analysis. The course provides a comprehensive look at the Java programming language including object oriented programming, concurrency, inheritance / polymorphism. Additionally, foundational data structures and related algorithms / analysis are studied. These include Lists, Stacks, Queues, Trees, Hash Tables, and Priority Queues. 
 
@@ -31,27 +31,19 @@ CS 2501: Data Structures and Algorithms I
 - Students will be able to understand and analyze program analysis using practical approaches (e.g., mergesort vs. quicksort) and theoretical approaches (e.g., balanced vs. unbalanced search trees). This will include both space and time complexity analyses.
 - Students will gather an abstract, and basic understanding of concurrency and associated issues (shared resources, etc.). Students will be able to implement simple multi-threaded programs in Java.
 
-**Grades:** Grades will be calculated by the following formula:
-
-- 18%: Laboratories
-- 50%: Two midterm exams (25% each)
-- 32%: Final exam
-
-I expect that grades will follow the standard decade curve: 90 and above is an A of some sort (A-, A, or A+), 80 and above is some sort of a B, etc.  **Note:** I reserve the right to modify the weighting (changing the curve, adding pop quizzes, etc.), especially if attendance drops off significantly.  If this does happen, it will be clearly announced in lecture.
+**Grades:** Grades are calculated using a **module** system. The course has 14 modules. Each module has three completion levels: Incomplete, Competence, and Mastery. Each letter grade is associated with competence and mastery in some subset of the 14 modules. A summary of the specific grade mappings can be found on the [course grading page](./grading.html)
 
 **Special Circumstances:** Students with special circumstances (athletics, extra time required on exams, final exam conflicts, SDAC considerations, etc.) need to let me know during the **first week of class**.
 
 **Textbooks: ** Due to the high cost of textbooks, and their relative low quality, there will be no recommended nor required textbooks this semester.
 
-**Exams:** There will be two midterm exams held during laboratory sessions (combined worth 50% of the final grade) and one final exam (worth 32% of the final grade). Check the course google calendar (through Collab) for the exact dates and times of all exams.
+**Exams:** There will be no traditional exams in this course. Instead, each module is associated with one **quiz**. These quizzes are comparable to one page of questions on a traditional exam. In order to complete a module, you must complete the quiz for that module at some point during the semester. Every week in lab, you will have 30 minutes to complete up to two quizzes for the course (if you fail you can try again another week). Every week each quiz that has been covered in lecture will be available to retake if necessary. Once you pass a quiz for a module, there is zero benefit to taking it a second time.
 
-Under **NO** circumstances will anybody be allowed to take the final exam early.  You may **ONLY** request to take the final exam at a different time if you have a final exam **CONFLICT**, not a busy final exam schedule.  Since it is a common exam time, the only conflicts are the courses listed on UVa's official exam schedule.
+**Final Exam:** Our final exam will be a 2-hour (note the shortened time span) for you to finish up any quizzes you have yet to complete. For example, if you have completed every quiz already, you will not need to take the final exam.
+ 
+**Homeworks:** Each of the fourteen modules in the course contains 1 or 2 homework assignments. To master a module, you must complete all of the homework assignments associated with that module. Homeworks are pass/fail. A grader will either assess that the work is sufficient, or is not sufficient. If the latter, you may fix the errors and resubmit. All homeworks must be completed before the last Wednesday class period (i.e., the second to last lecture for the semester).
 
-**Laboratories:** There will be 10 or 11 programming labs this semester, and they constitute 18% of your grade (regardless of how many labs end up occurring in practice). The majority of the work in this class is through the labs -- there are no separate homework assignments.
-
-All assignments will be submitted through Collab under the assignments tool. Each assignment has 3 dates: an open date (when you can start submitting the assignment), a due date (when it is due), and a close date (the last point that you can submit the assignment). Note that the assignment will be available much earlier, typically Wednesday or Thursday of the week before it's due.  The dates are listed for the week of the lab - the lab week starts on a Sunday and ends on a Saturday.
-
-The various dates: open dates, due dates, and close dates, are listed on the [Lab due dates page](./labduedates.html)
+All assignments will be submitted through Collab under the assignments tool.
 
 **Computing resources:** There are two specific computer resources needed for this course:
 
