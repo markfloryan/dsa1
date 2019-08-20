@@ -6,32 +6,20 @@ CS2501 - Data Structures and Algorithms I
 
 | Module | Homework 1 | Homework 2 |
 |-----------------|-----------|-----------|
-| Java Data Types | <a href="JavaDataTypes/power.pdf">Intro and Power Function</a> | |
-| Arrays | | |
-| Ifs | | |
-| Loops | <a href="Loops/roomba.pdf">Roomba Simulator</a> | <a href="Loops/roombaAnalysis.pdf">Roomba Analysis</a> |
-| References | | |
-| Methods / Parameters | <a href="MethodsAndParams/sixFunctions.pdf">Six Functions</a> | |
-| Objects / Classes | <a href="ObjectsAndClasses/blackjack.pdf">Blackjack Implementation</a> | <a href="ObjectsAndClasses/blackjackAnalysis.pdf">Blackjack Analysis</a> |
-| Interfaces / ADTs | | |
+| Basic Java 1 | <a href="BasicJava1/power.pdf">Intro and Power Function</a> | <a href="BasicJava1/sixFunctions.pdf">Six Functions</a> |
+| Basic Java 2 | <a href="Loops/roomba.pdf">Roomba Simulator</a> | <a href="Loops/roombaAnalysis.pdf">Roomba Analysis</a> |
+| Basic Java 3 | <a href="ObjectsAndClasses/blackjack.pdf">Blackjack Implementation</a> | <a href="ObjectsAndClasses/blackjackAnalysis.pdf">Blackjack Analysis</a> |
 | Vectors | | |
 | Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistsAnalysis.pdf">Linked List Analysis</a> |
-| Stacks | <a href="Stacks/stacks.pdf">Stack Implementation</a> | |
-| Queues | <a href="Queues/queues.pdf">Queue Implementation</a> | <a href="Queues/stackAndQueueAnalysis.pdf">Comparison of Stacks and Queues</a> |
+| Stacks and Queues | <a href="Stacks/stacks.pdf">Stack Implementation</a> | |
 | Big-Oh | | |
 | Recursion | | |
-| Binary Search Trees | | |
-| AVL | | |
-| Inheritance | | |
-| Bubble Sort | | |
-| Insertion Sort | | |
-| Merge Sort | | |
-| Quick Sort | | |
+| BSTs and AVL | | |
+| Basic Sorts | | |
+| Advanced Sorts | | |
 | Hash Tables | | |
 | Priority Queues | | |
-| Heap Sort | | |
 | Concurrency | <a href="Concurrency/concurrency.pdf">Concurrent Queue Implementation</a> | <a href="Concurrency/concurrencyAnalysis.pdf">Concurrent Queue Analysis</a> |
-| Exceptions | | |
 
 
 <a name="other"></a>Upcoming Homeworks (feel free to get ahead if you'd like)

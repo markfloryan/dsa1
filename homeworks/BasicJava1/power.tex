@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize 
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Methods and Parameters - Six Functions \\ % The assignment title
+\huge Basic Java 1 - Introduction to Eclipse and Power Function \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -84,35 +84,69 @@ showstringspaces=false}
 \maketitle % Print the title
 
 %----------------------------------------------------------------------------------------
-%	Six Functions
+%	Power Function
 %----------------------------------------------------------------------------------------
+
 \section{Summary}
 
-The goal of this homework is to continue practicing writing some simple java functions. You will do the following:
+The goal of this homework is to setup your coding environment in eclipse, and to write a very simple program. You will do the following:
 
 \begin{enumerate}
-	\item Implement six methods shown below.
-	\item Implement a small program to allow a user to choose one of those methods to invoke.
+	\item Download and install eclipse, setup a new project.
+	\item Implement a simple program that computes the power function.
 	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILE TO SUBMIT:} SixFunctions.java
+	\item \textbf{FILE TO SUBMIT:} Power.java
 \end{enumerate}
 
-\subsection{Six Functions}
+%------------------------------------------------
 
-For this homework, you will implement six functions, as well as a small program that allows a user to select which method they'd like to test. You will start by implementing the following methods:
+\subsection{Download and Install Eclipse}
 
-\begin{enumerate}
-\item \textbf{max}: Accepts an array of integers as a parameter, and returns the largest integer among them.
-\item \textbf{min}: Accepts an array of integers as a parameter, and return the lowest integer among them.
-\item \textbf{average}: Accepts an array of integers as a parameter, and returns the average of the numbers as a double.
-\item \textbf{median}: Accepts an array of integers as a parameter, and returns the \href{https://en.wikipedia.org/wiki/Median}{median} of the numbers. \emph{Note that you can invoke your max and min function here to make this easier. You don't necessarily need to sort the data.} 
-\item \textbf{stddev}: Accepts an array of integers as a parameter, and return the \href{https://en.wikipedia.org/wiki/Standard_deviation}{standard deviation} of the numbers. \emph{Note that you can invoke your average method here.}
-\item \textbf{mode}: Accepts and array of integers as a parameter, and returns the most commonly occurring value among them. \emph{If there is more than one mode, you may return any of them.}
-\end{enumerate}
+Eclipse is an Integrated Development Environment (IDE) for Java developers. An IDE allows programmers to code in an environment containing more advanced features than a text-editor. Eclipse also provides easy tools for managing projects, compiling code, incorporating outside libraries, etc. Your first step is to download Eclipse. You should be able to find it \href{https://www.eclipse.org/downloads/}{here}.
 
-Once these methods are complete, you should write a program that asks the user to input a number one through six. If the user doesn't enter a valid number, the program exits. If the user enters a valid number one through six, then they are prompted to enter seven integers. Those seven integers are then given to the corresponding method above (1 = max, 2 = min, 3 = average, 4 = median, 5 = stddev, 6 = mode) and the answer (a single value) is printed to the console. The program then exits.
+When you first open Eclipse, you might (depending on your version) see a welcome / tutorial screen (see figure ~\ref{fig:welcome}). If you see this screen, click on \textbf{Workbench} in the upper right corner to get to your primary work area. Your workbench, once you find it, should look like figure ~\ref{fig:workspace}.
 
-You should submit one file for this homework, \textbf{SixFunctions.java}.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/eclipse_welcome.png}
+\caption{Eclipse welcome screen}
+\label{fig:welcome}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\textwidth]{images/eclipse_workspace.png}
+\caption{Eclipse Workspace / Workbench}
+\label{fig:workspace}
+\end{figure}
+
+To start a new project, click on \textbf{File --> New --> Java Project}. A dialog will appear. You should give your project a name, select a folder for it (optional), and click finish. You should see your project appear in the left hand dialog of the screen. If you expand the project, you should see a reference to your Java system library, as well as a folder called \textbf{src}. 
+
+Your next task is create your first Java class. Right click on your project on the left and select \textbf{New --> Class}. A dialog will appear (see figure ~\ref{fig:newclass}), name your class \textbf{Power}, and select the check box that says \textbf{public static void main(String[] args)}. this option will create a main method automatically (though if you forget to do this, you can just type in the main method code manually).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{images/eclipse_class_dialog.png}
+\caption{New Class Dialog Screen}
+\label{fig:newclass}
+\end{figure}
+
+You are ready to begin coding. For this homework, you will only need the one class, and you can write all of your code in this area. To run your program, there is a small green bug icon at the top of the screen. 
+
+
+%------------------------------------------------
+
+\subsection{Power.java}
+
+Now that your environment is setup, you will write one very small Java method as a warm-up. The method signature is:
+
+\begin{lstlisting}
+public static long power(int base, int exp);
+\end{lstlisting}
+
+Your program should take in two numbers for the user. First, the base and second, the exponent. Then, your program should invoke the power method above and present the user (via the console) the value of base to the exponent power. You can assume that when we test your code, all inputs will fit inside of int types, and all correct answers will fit inside of long types. This method may be iterative or recursive, but \textbf{may not use any library functions such as Math.pow()}.
+
+
 
 %------------------------------------------------
 
