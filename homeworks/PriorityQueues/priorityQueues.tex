@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 09 - Heaps \\ % The assignment title
+\huge Priority Queues - Heap and Heap Sort \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -84,20 +84,20 @@ showstringspaces=false}
 \maketitle % Print the title
 
 %----------------------------------------------------------------------------------------
-%	Pre-Lab
+%	Summary
 %----------------------------------------------------------------------------------------
 
-\section{Pre-Lab}
+\section{Summary}
 
-This week, you will be building a custom MinHeap class as discussed in class. You will use this heap to implement an efficient HeapSort algorithm. 
+For this homework, you will be building a custom MinHeap class as discussed in class. You will use this heap to implement an efficient HeapSort algorithm. 
 
 \begin{enumerate}
-	\item Download the provided \href{https://markfloryan.github.io/dsa1/labs/lab09%20-%20Heaps/code/heaps.zip}{starter code}.
+	\item Download the provided \href{https://markfloryan.github.io/dsa1/homeworks/PriorityQueues/code/heaps.zip}{starter code}.
 	\item Implement the MinHeap.java class.
 	\item Implement the heapSort() method.
 	\item Test the correctness of your hash table using the provided tester.
-	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab09%20-%20Heaps/code/heaps.zip}{heaps.zip}
-	\item \textbf{FILES TO SUBMIT:} lab09.zip
+	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/homeworks/PriorityQueues/code/heaps.zip}{heaps.zip}
+	\item \textbf{FILES TO SUBMIT:} heaps.zip
 \end{enumerate}
 
 %------------------------------------------------
@@ -157,85 +157,7 @@ Heap Sort is an algorithm that sorts a list using the methods from a MinHeap or 
 %------------------------------------------------
 
 
-%----------------------------------------------------------------------------------------
-%	In-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{In-Lab}
 
-The goal of this in-lab is to continue practicing with heaps in a laid back environment:
-
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with some programming challenges regarding heaps. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Heaps}
-
-The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these.
-
-\begin{enumerate}
-	\item Add a new method to your MinHeap called updatePriority(T oldElement, T newElement). This method should find oldElement in the heap, update it to be set to newElement instead, and then make sure the heap ordering property still holds.
-	\item Write a method called computeProduct(ArrayList<Integer> list, int i). This method should return the product of the smallest $i$ elements in the given list. Note that list is not provided to you in sorted order. Use a MinHeap to solve this problem.
-	\item If you have extra time, try tackling \href{https://www.hackerearth.com/practice/data-structures/trees/heapspriority-queues/practice-problems/algorithm/haunted/}{this problem}.
-\end{enumerate}
-
-If you have coded up all of these and they work, then show the TA and you may leave early.
-
-
-%------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to produce a report analyzing the performance of a min-heap. 
-
-You will perform some experiment(s) by doing the following:
-
-\begin{enumerate}
-	\item Implement a priority queue naively by using one of our other data structures (e.g., list, tree, or hash table). You may use Java's built in data structures to make this easier if you'd like.
-	\item Run an experiment where you test the performance of your MinHeap (from prelab) to the naive implementation of the priority queue. Make sure you test the methods push(), poll(), and peek(). Which operations are slower? Which are faster? Do the results you see match the theoretical (i.e., big-theta runtimes) for the respective methods? Why or why not?
-	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabNine.pdf
-\end{enumerate}
-
-\subsection{Report}
-
-Summarize your experiment and your findings in a report. Make sure to adhere to these general guidelines:
-
-\begin{itemize}
-	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
-	\item You should write your report as if it is original novel research.
-	\item The grammar / spelling / professionalism of this document should be sound.
-	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
-\end{itemize}
-
-In addition to the general guidelines above, please follow the following rough outline for your paper:
-
-\begin{itemize}
-	\item \textbf{Abstract}: Summarize the entire document in a single paragraph
-	\item \textbf{Introduction}: Present the problem, and provide details regarding the data structues you implemented.
-	\item \textbf{Methods}: Describe your methodology for collecting data. How many executions, which inputs, when did the timer start/stop, etc.
-	\item \textbf{Results}: Describe your results from your execution runs.
-	\item \textbf{Conclusion}: Interpret your results. Which algorithm/data structure was fastest in each situation? If so, why? Does the performance you see match the theoretical runtimes of the algorithms? Why or why not?
-\end{itemize}
-
-Lastly, your paper MUST contain the following things:
-
-\begin{itemize}
-	\item A table (methods section) summarizing the experiments and how many execution runs were done in each group.
-	\item At least one table (results section) summarizing the results of all of your experiments.
-	\item Some kind of graph visualizing the results of the table from the previous bullet.
-\end{itemize}
-
-%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 
