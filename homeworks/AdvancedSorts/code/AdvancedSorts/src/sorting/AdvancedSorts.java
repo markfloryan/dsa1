@@ -2,37 +2,32 @@ package sorting;
 
 import java.util.HashMap;
 
-public class SortingAlgorithms {
-	
-	public static<T extends Comparable<T>> void bubbleSort(T[] list) {
-		//TODO: Implement this method
-	}
-	
-	
-	public static<T extends Comparable<T>> void insertionSort(T[] list) {
-		//TODO: Implement this method
-	}
-	
+public class AdvancedSorts {
+
 	
 	public static<T extends Comparable<T>> void mergeSort(T[] list) {
 		//TODO: Implement this method
 	}
-	/* HELPER METHOD */
+	
 	private static<T extends Comparable<T>> void mergeSort(T[] list, int i, int j) {
 		//TODO: Implement this method
 	}
 	
 	
+	
+	
 	public static<T extends Comparable<T>> void quickSort(T[] list) {
 		//TODO: Implement this method
 	}
-	/* HELPER METHOD */
+	
 	private static<T extends Comparable<T>> void quickSort(T[] list, int i, int j) {
 		//TODO: Implement this method
 	}
 	
 	
-	/* TESTING CODE */
+	/** EVERYTHING BELOW HERE IS USED FOR TESTING **/
+	//------------------------
+
 	
 	/* Number of elements to sort */
 	private static final int SIZE = 100;
@@ -44,22 +39,8 @@ public class SortingAlgorithms {
 		for(int i=0; i<SIZE; i++) list[i] = (int)(Math.random()*SIZE);
 		
 		/* Make four copies to sort */
-		Integer[] bub = list.clone();
-		Integer[] ins = list.clone();
 		Integer[] mer = list.clone();
 		Integer[] qui = list.clone();
-		
-		System.out.print("Sorting using bubble sort...");
-		bubbleSort(bub);
-		System.out.print("Done...checking if sorted correctly...");
-		checkSorted(list, bub);
-		System.out.println("DONE");
-		
-		System.out.print("Sorting using insertion sort...");
-		insertionSort(ins);
-		System.out.print("Done...checking if sorted correctly...");
-		checkSorted(list, ins);
-		System.out.println("DONE");
 		
 		System.out.print("Sorting using merge sort...");
 		mergeSort(mer);

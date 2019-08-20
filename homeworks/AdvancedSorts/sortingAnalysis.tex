@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 07 - Sorting \\ % The assignment title
+\huge Advanced Sorts - Sorting Analysis \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -83,114 +83,25 @@ showstringspaces=false}
 
 \maketitle % Print the title
 
-%----------------------------------------------------------------------------------------
-%	Pre-Lab
-%----------------------------------------------------------------------------------------
 
-\section{Pre-Lab}
-
-This week, you will be implementing four sorting algorithms. For the post-lab section, you will be analyzing the performance of these sorting methods.
-
-\begin{enumerate}
-	\item Download the provided starter code.
-	\item Implement four sorting algorithms.
-	\item Use the provided tester to check if each methods are working correctly.
-	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab07%20-%20Sorting/code/sorting.zip}{sorting.zip}
-	\item \textbf{FILES TO SUBMIT:} lab07.zip
-\end{enumerate}
-
-%------------------------------------------------
-
-\subsection{SortingAlgorithms.java}
-
-You will be implementing four sorting algorithms for this lab. They are listed below:
-
-\begin{lstlisting}
-/**
-  * Slow sort number 1. Bubble sort.
-  */
-public static<T extends Comparable<T>> void bubbleSort(T[] list);
-	
-/**
-  * Usually slow sort number 2. Insertion sort.
-  */
-public static<T extends Comparable<T>> void insertionSort(T[] list);
-	
-/**
-  * Recursive merge sort and associated private helper method
-  * the second method below provides the portion of the array
-  * (i.e., index i to j inclusive) that we want to sort.
-  */
-public static<T extends Comparable<T>> void mergeSort(T[] list);
-private static<T extends Comparable<T>> void
-								mergeSort(T[] list, int i, int j);
-
-/**
-  * Recursive quick sort and associated private helper method
-  * the second method below provides the portion of the array
-  * (i.e., index i to j inclusive) that we want to sort.
-  */
-public static<T extends Comparable<T>> void quickSort(T[] list);
-private static<T extends Comparable<T>> void
-								quickSort(T[] list, int i, int j);
-\end{lstlisting}
-
-You may add additional helper methods that might be useful in implementing these sorting algorithms. Some methods that may be useful, but are optional, include swapping two elements given indices $i$ and $j$, merging two sorted lists into a single sorted list, partitioning a list around a pivot, etc. 
-
-The provided tester (main method) will call each of your sorting methods one at a time. Above the main method is a variable you can change to increase or decrease the size of the lists to sort while testing. The tester will call each of your four sorting methods one at a time. For each, it will take the result and check if 1) the sizes of the unsorted and sorted lists are still the same, 2) the elements in the sorted list are indeed in sorted order, and 3) the sorted list contains the same elements in total that the original list does. If any of these checks fail, you should get a notification to that effect.
-
-%------------------------------------------------
 
 
 %----------------------------------------------------------------------------------------
-%	In-Lab
+%	Summary
 %----------------------------------------------------------------------------------------
-\newpage
-\section{In-Lab}
+\section{Summary}
 
-The goal of this in-lab is to continue practicing with sorting in a laid back environment. As usual, you will:
-
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with some programming challenges regarding trees. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Sorting}
-
-The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these.
-
-\begin{enumerate}
-	\item Re-write insertion sort, but have it sort a linked list (given as a parameter) instead of an array.
-	\item Update your quicksort implementation to use the median of medians algorithm found \href{https://brilliant.org/wiki/median-finding-algorithm/}{here}. The median of medians is used to select which item in the list to use as your pivot. Then, call quicksort on a reverse sorted list. How much faster does the algorithm get?
-	\item Implement merge sort iteratively (i.e., no recursive calls allowed). You can still invoke your merge method within your iterative loops.
-	\item \textbf{Bonus Challenge}: Implement merge sort in-place. This means that the algorithm can only use $\Theta(1)$ extra space. We will not include the recursive space necessary to make the recursive calls. Thus, this challenge reduces to the following: Can you implement the merge subroutine without allocating the extra array?
-\end{enumerate}
-
-If you have coded up all of these and they work, then show the TA and you may leave early.
-
-
-%------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to produce a report analyzing the strengths and weaknesses of various sorting algorithms. 
+The goal of this homework is to produce a report analyzing the strengths and weaknesses of various sorting algorithms. \textbf{Note that you are required to have completed the Basic Sorts Module for this homework}
 
 You will perform some experiment(s) by doing the following:
 
 \begin{enumerate}
-	\item Experiment 1: Run an experiment in which you fill an array with random values between 1 and 1,000,000. Time each sorting algorithm. Make sure the list is large enough that comparing the runtimes of the algorithms shows a meaningful difference.
+	\item Experiment 1: Run an experiment in which you fill an array with random values between 1 and 1,000,000. Time each sorting algorithm (including the basic and advanced sorts). Make sure the list is large enough that comparing the runtimes of the algorithms shows a meaningful difference.
 	\item Experiment 2: Run each algorithm on a large list of elements that begins in reverse sorted order. How do these results compare with that of experiment 1?
 	\item Experiment 3: Run each algorithm on a list that is "almost" sorted. Here, by "almost sorted", we mean that each element in the unsorted list is about 5-10 positions away from its correct position, but almost all elements are not in their final position. 
 	\item Experiment 4: Update your code to add a "hybrid sort" that switches algorithms mid-executions. Design this algorithm such that you take advantage of the results obtained in experiments 1-3. Then, go back and run experiments 1-3 again with your new algorithm. Can you get yoru algorithm to beat all of the others in every experiment?
 	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabSeven.pdf
+	\item \textbf{FILES TO SUBMIT:} Sorting Analysis.pdf
 \end{enumerate}
 
 For each experiment, make sure that you are sorting large enough lists such that differences in the algorithm speeds begins to show.
@@ -201,7 +112,7 @@ Summarize your experiment and your findings in a report. Make sure to adhere to 
 
 \begin{itemize}
 	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
+	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/homeworks/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
 	\item You should write your report as if it is original novel research.
 	\item The grammar / spelling / professionalism of this document should be sound.
 	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
