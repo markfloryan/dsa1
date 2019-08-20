@@ -17,7 +17,7 @@ CS2501 - Data Structures and Algorithms I
 | BSTs and AVL | <a href="BinarySearchTrees/BinarySearchTrees.pdf">Tree Implementations</a> | <a href="BinarySearchTrees/BSTAnalysis.pdf">Tree Analysis</a> |
 | Basic Sorts | <a href="BasicSorts/basicSorts.pdf">Implementing Basic Sorts</a>| |
 | Advanced Sorts | <a href="AdvancedSorts/advancedSorts.pdf">Implementing Advanced Sorts</a> | <a href="AdvancedSorts/sortingAnalysis.pdf">Analyzing Sorting Algorithms</a> |
-| Hash Tables | | |
+| Hash Tables | <a href="HashTables/hashTables.pdf">Implementing Hash Table and Word Search Solver</a> | <a href="HashTables/hashTableAnalysis.pdf">Hash Table Optimizations</a> |
 | Priority Queues | | |
 | Concurrency | <a href="Concurrency/concurrency.pdf">Concurrent Queue Implementation</a> | <a href="Concurrency/concurrencyAnalysis.pdf">Concurrent Queue Analysis</a> |
 
