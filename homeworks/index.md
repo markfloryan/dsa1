@@ -14,7 +14,7 @@ CS2501 - Data Structures and Algorithms I
 | Stacks and Queues | <a href="Stacks/stacks.pdf">Stack Implementation</a> | |
 | Big-Oh | | |
 | Recursion | | |
-| BSTs and AVL | | |
+| BSTs and AVL | <a href="BinarySearchTrees/BinarySearchTrees.pdf">Tree Implementations</a> | <a href="BinarySearchTrees/BSTAnalysis.pdf">Tree Analysis</a> |
 | Basic Sorts | | |
 | Advanced Sorts | | |
 | Hash Tables | | |

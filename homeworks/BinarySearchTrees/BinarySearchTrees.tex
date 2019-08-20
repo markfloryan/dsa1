@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Lab 06 - Trees \\ % The assignment title
+\huge BSTs and AVL - Tree Implementations \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -84,21 +84,21 @@ showstringspaces=false}
 \maketitle % Print the title
 
 %----------------------------------------------------------------------------------------
-%	Pre-Lab
+%	Summary
 %----------------------------------------------------------------------------------------
 
-\section{Pre-Lab}
+\section{Summary}
 
-This week, you will be implementing three classes, which are all increasingly complicated Tree objects. You will start by implementing a basic Binary Tree with the three tree traversals convered in class. Then, you will implement and test a working Binary Search Tree. Lastly, you will implement a few methods to complete an AVL Tree.
+For this homework, you will be implementing three classes, which are all increasingly complicated Tree objects. You will start by implementing a basic Binary Tree with the three tree traversals convered in class. Then, you will implement and test a working Binary Search Tree. Lastly, you will implement a few methods to complete an AVL Tree.
 
 \begin{enumerate}
 	\item Download the provided starter code
 	\item Implement some general methods in the BinaryTree class.
 	\item Implement the BinarySearchTree class
 	\item Implement the missing methods in the AVLTree class (some of this is done for you to simplify the assignment)
-	\item Use the provided tester files to verify your implementation works. Note that you should test your code more so than the provided tester does this time. The tester is NOT as thorough as in previous labs.
-	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/labs/lab06%20-%20Trees/code/trees.zip}{trees.zip}
-	\item \textbf{FILES TO SUBMIT:} lab06.zip
+	\item Use the provided tester files to verify your implementation works. Note that you should test your code more so than the provided tester does this time. The tester is NOT as thorough as in previous homeworks.
+	\item \textbf{FILES TO DOWNLOAD:} \href{https://markfloryan.github.io/dsa1/homeworks/BinarySearchTrees/code/BinarySearchTrees.zip}{BinarySearchTrees.zip}
+	\item \textbf{FILES TO SUBMIT:} TreeImplementations.zip
 \end{enumerate}
 
 %------------------------------------------------
@@ -176,96 +176,10 @@ public class AVLTree<T extends Comparable<T>>
 
 Once you are done, you can look at the two provided tester files to check your implementation. As stated earlier, these files do not rigorously check your implementations, so you should be writing your own test cases in addition to the few provided.
 
-When you are done, submit your entire project as a zip file to Collab.
+When you are done, submit your entire project as a zip file.
 
 %------------------------------------------------
 
-
-%----------------------------------------------------------------------------------------
-%	In-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{In-Lab}
-
-The goal of this in-lab is to continue practicing with trees in a laid back environment. As usual, you will:
-
-\begin{enumerate}
-	\item Get into small groups of two
-	\item The TAs will present you with some programming challenges regarding trees. These will not be graded, but you are required to attend and to participate.
-	\item You may think about the challenges before lab below if you'd like, but we highly recommend that you not solve them ahead of time.
-	\item The TAs will give you time to solve each problem and lead you in sharing solutions with one another.
-\end{enumerate}
-
-\subsection{Trees}
-
-The TAs will lead you in going through the following challenges. It is ok if you do not get through each of these. When coding these, you may want to use your tree implementations from the prelab for these challenges.
-
-\begin{enumerate}
-	\item Write a method that accepts the root node of a binary tree, and flips the tree recursively. More formally, every right child and left child of EVERY node (including internal nodes) should be flipped.
-	\item Write a method that accepts the root of a binary tree, and returns tree iff the tree is symettrical. More formally, for all values x in the tree. If I can find x by going on some path (e.g, right, right, left), than I can find another copy of x by going the inverse of that path (e.g., left, left, right).
-	\item Given an \href{https://en.wikipedia.org/wiki/Binary_expression_tree}{expression tree}, print out the value of the expression. You can model this as a Binary Tree that stores strings. Use Integer.parseInt() to turn the numeric strings into integer equivalents.
-	\item On older phones, \href{https://en.wikipedia.org/wiki/T9_(predictive_text)}{T9 word} was used for texting friends. Users would type numbers on their phone (e.g., 2,2,8) and the system would find words that could be made with those sequence of letters. For example, 2 is either a,b, or c and 8 is either t,u,v. So one valid word the person may have been typing is cat. Write some code that reads in a list of valid english words, and builds a tree such that given a list of numbers typed, traversing that tree would take me to the valid english words that may have been spoken. Note that you will need a tree that has more than two children here.
-	\item Continuing the previous question, write a method that given the sequence of numbers typed and the tree above, prints out all the english words that may have been typed.
-\end{enumerate}
-
-If you have coded up all of these and they work, then show the TA and you may leave early.
-
-
-%------------------------------------------------
-
-
-%----------------------------------------------------------------------------------------
-%	Post-Lab
-%----------------------------------------------------------------------------------------
-\newpage
-\section{Post-Lab}
-
-The goal of this post-lab is to write a report analyzing the use of a binary search tree versus an avl tree. For the first time, we will be asking to find a dataset on your own to use for your analysis. 
-
-You will perform an experiment by doing the following:
-
-\begin{enumerate}
-	\item Find a large corpus of data. I would recommend a large piece of text. Perhaps a very long article or a an electronic book. You may share datasets with each other if you find good ones.
-	\item Take your file and insert every element (e.g., word from the book) into both a binary search tree and an avl tree. Use a timer to see how long it takes to insert all of the elements into the avl versus the bst.
-	\item Call the find method on every word in your dataset. Time how long this operation takes in each data structure total.
-	\item Print out the height of each tree.
-	\item Now, repeat the experiment, but this time don't use a real dataset. Use random numbers from 1-10000. Do you notice any differences?
-	\item Write a report summarizing and analyzing your findings. Which data structure was faster.
-	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} PostLabSix.pdf
-\end{enumerate}
-
-\subsection{Report}
-
-Summarize your experiment and your findings in a report. Make sure to adhere to these general guidelines:
-
-\begin{itemize}
-	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/labs/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
-	\item You should write your report as if it is original novel research.
-	\item The grammar / spelling / professionalism of this document should be sound.
-	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
-\end{itemize}
-
-In addition to the general guidelines above, please follow the following rough outline for your paper:
-
-\begin{itemize}
-	\item \textbf{Abstract}: Summarize the entire document in a single paragraph
-	\item \textbf{Introduction}: Present the problem, and provide details regarding the two strategies you implemented.
-	\item \textbf{Methods}: Describe your methodology for collecting data. How many method calls, how many executions, how you averaged things, etc.
-	\item \textbf{Results}: Describe your results from your execution runs.
-	\item \textbf{Conclusion}: Interpret your results. Which data structure was faster? Did the results change from a real dataset to a random one? If so, why? How different was the heights of the different trees? Why?
-\end{itemize}
-
-Lastly, your paper MUST contain the following things:
-
-\begin{itemize}
-	\item A table (methods section) summarizing the experiments and how many execution runs were done in each group.
-	\item At least one table (results section) summarizing the results of the experiment(s).
-	\item Some kind of graph visualizing the results of the table from the previous bullet.
-\end{itemize}
-
-%------------------------------------------------
 
 %----------------------------------------------------------------------------------------
 
