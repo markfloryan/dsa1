@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 AUG 2019 10:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  20 AUG 2019 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**roombaAnalysis.tex
-(./roombaAnalysis.tex
+**blackjackAnalysis.tex
+(./blackjackAnalysis.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/koma-script/scrartcl.cls
@@ -601,8 +601,8 @@ Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
 \f@ncyO@olf=\skip69
 \f@ncyO@orf=\skip70
 )
-(./roombaAnalysis.aux)
-\openout1 = `roombaAnalysis.aux'.
+(./blackjackAnalysis.aux)
+\openout1 = `blackjackAnalysis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
@@ -700,9 +700,9 @@ LaTeX Info: Redefining \ref on input line 82.
 LaTeX Info: Redefining \pageref on input line 82.
 LaTeX Info: Redefining \nameref on input line 82.
 
-(./roombaAnalysis.out) (./roombaAnalysis.out)
+(./blackjackAnalysis.out) (./blackjackAnalysis.out)
 \@outlinefile=\write3
-\openout3 = `roombaAnalysis.out'.
+\openout3 = `blackjackAnalysis.out'.
 
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 85.
 
@@ -748,47 +748,33 @@ LaTeX Font Info:    Try loading font information for TS1+futs on input line 111
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fourier/ts1futs.fd
 File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
-)
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 113.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 113.
-LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 113.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 10.07397pt on input line 113.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 7.63599pt on input line 113.
-LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 113.
- [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 151.
+) [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 151.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
 
-(./roombaAnalysis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 151.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 151.
-Package rerunfilecheck Info: File `roombaAnalysis.out' has not changed.
+(./blackjackAnalysis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
+Package rerunfilecheck Info: File `blackjackAnalysis.out' has not changed.
 (rerunfilecheck)             Checksum: D52E8C6071E655AA2E825900299196DA;170.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 151.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
  ) 
 Here is how much of TeX's memory you used:
- 10975 strings out of 492995
- 170033 string characters out of 6132704
- 445562 words of memory out of 5000000
- 14331 multiletter control sequences out of 15000+600000
- 92095 words of font info for 97 fonts, out of 8000000 for 9000
+ 10948 strings out of 492995
+ 169701 string characters out of 6132704
+ 445572 words of memory out of 5000000
+ 14308 multiletter control sequences out of 15000+600000
+ 73074 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,51p,8825b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,11n,51p,8828b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/te
-xlive/2017/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb>
-Output written on roombaAnalysis.pdf (3 pages, 42627 bytes).
+exlive/2017/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb>
+Output written on blackjackAnalysis.pdf (3 pages, 40374 bytes).
 PDF statistics:
- 57 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  12 named destinations out of 1000 (max. 500000)
  25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
