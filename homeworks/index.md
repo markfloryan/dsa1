@@ -15,7 +15,7 @@ CS2501 - Data Structures and Algorithms I
 | Big-Oh | | |
 | Recursion | | |
 | BSTs and AVL | <a href="BinarySearchTrees/BinarySearchTrees.pdf">Tree Implementations</a> | <a href="BinarySearchTrees/BSTAnalysis.pdf">Tree Analysis</a> |
-| Basic Sorts | | |
+| Basic Sorts | <a href="BasicSorts/basicSorts.pdf">Implementing Basic Sorts</a>| |
 | Advanced Sorts | | |
 | Hash Tables | | |
 | Priority Queues | | |
