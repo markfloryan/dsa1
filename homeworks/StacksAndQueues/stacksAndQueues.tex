@@ -71,7 +71,7 @@ showstringspaces=false}
 \normalfont \normalsize
 \textsc{University of Virginia, Department of Computer Science} \\ [25pt] % Your university, school and/or department name(s)
 \horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
-\huge Queues - Stack and Queue Analysis \\ % The assignment title
+\huge Stacks and Queues - Stack / Queue Implementations \\ % The assignment title
 \horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
 }
 
@@ -83,71 +83,87 @@ showstringspaces=false}
 
 \maketitle % Print the title
 
-
 %----------------------------------------------------------------------------------------
 %	Summary
 %----------------------------------------------------------------------------------------
+
 \section{Summary}
 
-\textbf{NOTE: This homework requires that you have a working implementation for the Stacks homework assignment as well as the Queues homework assignment. You must finish both those module homeworks before doing this assignment.}
-
-The goal of this homework is to write a report comparing the efficiency of linked-list based queues to array-based stacks. Theoretically, the runtimes for all operations on both these data structures is constant time. So, it is ok that we are comparing stacks to queues here. What we are really interested in is how much the resize operation on the stack, which is linear time and should slow us down, affects the overall performance of the stack versus the queue.
-
-You will perform an experiment by doing the following:
+For this homework, you will be implementing an \textbf{array based} stack and a \textbf{linked-list based} queue.
 
 \begin{enumerate}
-	\item Write some test code to time the various methods of your stack and queue. We are interested in testing enqueue versus push and dequeue versus pop
-	\item Run a small experiment timing each method. Because these methods are very fast, you'll need to invoke each MANY times before you see a slow enough performance and be able to compare your findings.
-	\item Write a report summarizing and analyzing your findings
-	\item \textbf{FILES TO DOWNLOAD:} None
-	\item \textbf{FILES TO SUBMIT:} stackAndQueueAnalysis.pdf
+	\item Download the starter code and import the project into Eclipse
+	\item Implement the Stack.java class
+	\item Implement the Queue.java class
+	\item Verify your implementation using the provided tester class
+	\item \textbf{FILES TO DOWNLOAD:} StacksAndQueues.zip
+	\item \textbf{FILES TO SUBMIT:} StacksAndQueues.zip
 \end{enumerate}
 
-For this experiment, you should time your stack and queue by calling each method $i$. You may play around with $i$ until you find a number that works well, but they should be the same for each method (e.g., don't execute enqueue $10^5$ times and push $10^7$ times). You should test the following methods:
+%------------------------------------------------
+
+
+\subsection{Stack.java}
+
+You will implement a basic stack in java. This stack \textbf{must be an array-based stack}. Thus, your stack must support the resizing of the capacity of the underlying array. You \textbf{may not use an instance of Vector} in order to accomplish this. Instead, your class must have a field that is the underlying array. We are doing this so that you are implementing both a stack, and also learning how vector is implemented at the same time.
+
+The methods you are responsible for are shown below:
 
 \begin{lstlisting}
-	/* You will test these methods: */
+	public class Stack<T>{
+		// The fields of this stack are given to you as follows
+		private Object[] data;
+		private int size = 0;
+		private static final int INITIAL_CAPACITY = 100;
 
-	/* Compare the speeds of these two methods */
-	Queue.enqueue(T data);
-	Stack.push(T data);
+		/* Constructors not shown. Are implemented for you. */
 
-	/* Seperately, compare the speeds of these two */
-	Queue.dequeue();
-	Stack.pop();
+		public void push(T data);
+
+		@SuppressWarnings("unchecked")
+		public T pop();
+
+		public int size();
+
+		public int capacity();
+
+		public void resize(int newCapacity);
+	}
 \end{lstlisting}
 
-\subsection{Report}
+\subsection{Testing and submitting}
 
-Summarize your experiment and your findings in a report. Make sure to adhere to these general guidelines:
-
-\begin{itemize}
-	\item Your submission MUST BE a pdf document. You will receive a zero if it is not.
-	\item Your document MUST be presented as if submitted to a professional publication outlet. You can use the \href{https://markfloryan.github.io/dsa1/homeworks/WordPaperTemplate.zip}{template} posted in the course repository or follow \href{https://www.springer.com/us/computer-science/lncs/conference-proceedings-guidelines}{Springer's guidelines for conference proceedings}.
-	\item You should write your report as if it is original novel research.
-	\item The grammar / spelling / professionalism of this document should be sound.
-	\item When possible, do not use the first person. Instead of "I ran the code 60 times", use "The code was executed 60 times...".
-\end{itemize}
-
-In addition to the general guidelines above, please follow the following rough outline for your paper:
-
-\begin{itemize}
-	\item \textbf{Abstract}: Summarize the entire document in a single paragraph
-	\item \textbf{Introduction}: Present the problem, and provide details regarding the two strategies you implemented.
-	\item \textbf{Methods}: Describe your methodology for collecting data. How many method calls, how many executions, how you averaged things, etc.
-	\item \textbf{Results}: Describe your results from your execution runs.
-	\item \textbf{Conclusion}: Interpret your results. Which methods were fast and which were slow? Did this surprise you? Does this align with the theoretical runtimes of those methods? How large did the lists need to get before you witnessed a slowdown?
-\end{itemize}
-
-Lastly, your paper MUST contain the following things:
-
-\begin{itemize}
-	\item A table (methods section) summarizing the different methods and how many execution runs were done in each group.
-	\item A table (results section) summarizing each method and the averages / std. dev. of runtimes for each (as well as any other data you decided to collect).
-	\item Some kind of graph visualizing the results of the table from the previous bullet.
-\end{itemize}
+We are providing a tester class with a main function. This class will add and remove many random elements to your data structure and check that it works correctly. The tester will output an error message if anything goes wrong.
 
 %------------------------------------------------
+
+%------------------------------------------------
+
+\subsection{Queue.java}
+
+Implement the *Queue* class inside the Queue.java file. The methods you are responsible for are listed below. This Queue \textbf{must be a linked-list based queue}. You may use Java's built-in Linked List (import java.util.LinkedList) or you may use your own implementation from the previous labs.
+
+\begin{lstlisting}
+	public class Queue<T>{
+		public Queue();
+
+		public int size();
+
+		public void enqueue(T data);
+
+		public T dequeue();
+	}
+\end{lstlisting}
+
+\subsection{Testing and submitting}
+
+We are providing a tester class with a main function. This class will add and remove many random elements to your data structure and check that it works correctly. The tester will output an error message if anything goes wrong.
+
+To submit, please submit your entire project as a zip.
+
+%------------------------------------------------
+
+
 
 %----------------------------------------------------------------------------------------
 
