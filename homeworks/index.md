@@ -17,7 +17,7 @@ CS2501 - Data Structures and Algorithms I
 | Basic Java 3 | <a href="ObjectsAndClasses/blackjack.pdf">Blackjack Implementation</a> | <a href="ObjectsAndClasses/blackjackAnalysis.pdf">Blackjack Analysis</a> |
 | Vectors | <a href="Vectors/vectors.pdf">Vector Implementation</a> | |
 | Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistsAnalysis.pdf">Linked List Analysis</a> |
-| Stacks and Queues | <a href="Stacks/stacks.pdf">Stack Implementation</a> | |
+| Stacks and Queues | <a href="StacksAndQueues/stacksAndQueues.pdf">Stack/Queue Implementation</a> | <a href="StacksAndQueues/stackAndQueueAnalysis.pdf">Stack/Queue Analysis</a> |
 | Big-Oh | COMING SOON | |
 | Recursion | COMING SOON | |
 | BSTs and AVL | <a href="BinarySearchTrees/BinarySearchTrees.pdf">Tree Implementations</a> | <a href="BinarySearchTrees/BSTAnalysis.pdf">Tree Analysis</a> |
