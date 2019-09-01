@@ -66,6 +66,7 @@
 &nbsp;  
 [Introduction to Java](#/intro) <br />
 [Data Types](#/dataTypes) <br />
+[Basic Functions](#/basicFuncs) <br />
 [Arrays](#/arrays) <br />
 [Control Flow](#/controlFlow) <br />
 [Example](#/example) <br />
@@ -315,6 +316,55 @@ String s1 = (String)9;
 </script></section>
 
 </section>
+
+
+<!---------------------------------------------- -->
+  
+
+
+<!-- Simple functions -->
+
+<section> 
+
+<section data-markdown id="basicFuncs" class="center"><script type="text/template">
+### Basic Functions
+</script></section>
+
+<section data-markdown><script type="text/template">
+### Functions
+
+- functions use the *static* syntax
+
+<pre><code class="hljs" data-trim contenteditable>
+import java.io.*;
+public class ArrayExample{
+
+  public static int add(int x, int y){
+    return x + y;
+  }
+
+  public static void main(String[] args){
+    int a = 5;
+    int b = 7;
+    System.out.println("the sum is: " + add(a,b));
+  }
+}
+</code></pre>
+</script></section>
+
+<section data-markdown><script type="text/template">
+### Notes on Functions
+
+- for now, you can ignore the *public* and *static* qualifiers
+- return type can be **void** if nothing is returned by the function
+- formal parameters (e.g., x,y) must have a declared type (e.g., int)
+  - actual parameters (e.g., a,b) must much that declared type
+- *add* is actually called a **method**, but being casual with the nomenclature for right now.
+
+</script></section>
+
+</section>
+
 
 <!---------------------------------------------- -->
 	
