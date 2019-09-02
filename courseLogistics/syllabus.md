@@ -50,7 +50,7 @@ All assignments will be submitted through Collab under the assignments tool.
 - You need to have a working computer that can run [Java Eclipse IDE](https://www.eclipse.org/downloads/). Any modern laptop or desktop will have no problem running this software.
 - We will provide you with lab accounts. This will allow you to login remotely to our departmental lab servers and use a pre-set environment if you prefer. However, the department does not provide physical machines anymore, so you'll need your own machine to access those services.
 
-**Attendance:** Attendance in labs is mandatory; attendance in lecture is not. Not attending lab will result in a zero for the in-lab. You cannot change labs without prior permission. Please see the [first set of lecture slides](../slides/00-introduction.html) about lab attendance.
+**Attendance:** Attendance in labs is mandatory if you intend to pass the class (because the quizzes are taken each week in lab); attendance in lecture is not mandatory.
 
 **Recording Lectures:** You may NOT record my lectures. University policy states that this is not allowed without my consent.
 
