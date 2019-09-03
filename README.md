@@ -18,6 +18,7 @@ repository first**
 
 - [Course Logistics](courseLogistics/index.html): The syllabus, introductory slide deck, etc.
 - [Homeworks](homeworks/index.html) ([md](homeworks/index.md)): the homeworks are the main assignments in the course. For each course module, there are 0, 1, or 2 homeworks. 
+- [Quizzes](quizzes/quizzes.pdf): A published booklet of the weekly quizzes you will take for each module (note that this is under construction and will updated regularly)
 - [Slides](slides/index.html) ([md](slides/index.md)): Contains the slides used in the course.  The slides use [reveal.js](https://github.com/hakimel/reveal.js/), an HTML presentation framework.
 - [Class Exercises](java/classExercises.html): Code we wrote in lecture 
 - Other stuff:
