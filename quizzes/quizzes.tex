@@ -1,0 +1,343 @@
+\documentclass[10pt]{article}
+\usepackage[top=1in,bottom=1in,left=0.75in,right=0.75in,centering]{geometry}
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+\usepackage{palatino}
+\usepackage{wrapfig}
+\usepackage{lastpage}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{graphicx,type1cm,eso-pic,color}
+\usepackage{amsmath}
+\usepackage{wasysym}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{listings}
+\lstset{
+	language=Java
+}
+\usepackage{subcaption}
+
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0 pt}@{}}
+
+\makeatletter
+% Reinsert missing \algbackskip
+\def\algbackskip{\hskip-\ALG@thistlm}
+\makeatother
+
+\def\course{CS 2501: DSA1}
+\def\exam{Weekly Quizzes}
+\def\semester{Fall 2019}
+
+\newboolean{solution}
+\setboolean{solution}{false}
+
+% add watermark if it's a solution exam
+% see http://jeanmartina.blogspot.com/2008/07/latex-goodie-how-to-watermark-things-in.html
+\makeatletter
+\AddToShipoutPicture{%
+\setlength{\@tempdimb}{.5\paperwidth}%
+\setlength{\@tempdimc}{.5\paperheight}%
+\setlength{\unitlength}{1pt}%
+\put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+\ifthenelse{\boolean{solution}}{
+\makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.95}%
+{\fontsize{5cm}{3cm}\selectfont{\textsf{Solution}}}}}%
+}{}
+}}
+\makeatother
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\lhead{\course\ \exam, \semester}
+\chead{Page \thepage\ of \pageref{LastPage}}
+\rhead{UVa userid: \hspace{0.75in}}
+\cfoot{}
+
+\setlength{\headheight}{14.5pt}
+
+\newenvironment{itemlist}{
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}}
+{\end{itemize}}
+
+\newenvironment{numlist}{
+\begin{enumerate}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}}
+{\end{enumerate}}
+
+\newcounter{pagenum}
+\setcounter{pagenum}{2}
+\newcommand{\pageheader}[1]{
+\clearpage\vspace*{-0.4in}\noindent{\large\bf{{#1}}}
+\addtocounter{pagenum}{1}
+\cfoot{}
+}
+
+\newcounter{quesnum}
+\setcounter{quesnum}{1}
+\newcommand{\question}[2][??]{
+\begin{list}{\labelitemi}{\leftmargin=2em}
+\item [\arabic{quesnum}.] {[}{#1} points{]} {#2}
+\end{list}
+\addtocounter{quesnum}{1}
+}
+
+\definecolor{red}{rgb}{1.0,0.0,0.0}
+\newcommand{\answer}[2][??]{
+%\begin{tabular}{p{0.25in}p{6in}}
+
+\ifthenelse{\boolean{solution}}{
+\color{red} #2 \color{black}}
+{\vspace*{#1} }
+%\end{tabular}
+}
+
+\begin{document}
+
+\section*{\course\ \exam}
+
+\vspace{0.1in}
+
+\begin{tabular}{ll}
+\Large\bf\hspace{-0.125in} Name & \hspace*{5in} \\ \cline{2-2}
+\end{tabular}
+
+\vspace{0.35in}
+
+\noindent You MUST write your e-mail ID on {\bf EACH} quiz page that you choose to complete. Please put your name on the top of each page you complete as well.
+
+\vspace{12pt}
+
+\noindent You may complete up to two pages of this quiz booklet. If you complete more than that, we will only grade two of the pages (which two is up to our discretion).
+
+\vspace{12pt}
+
+\noindent There are \pageref{LastPage} pages to this quiz booklet.  Once the
+time starts, please make sure you have all the pages.
+
+\vspace{12pt}
+
+\noindent This quiz is CLOSED text book, closed-notes,
+closed-calculator, closed-cell phone, closed-com\-pu\-ter,
+closed-neighbor, etc.  Questions are worth different amounts, so be
+sure to look over all the questions and plan your time accordingly.
+Please sign the honor pledge below.
+
+\vspace{0.25in}
+
+\begin{center}
+\noindent \begin{tabular}{c} \hline
+\hspace*{6in}\vspace{0.25in}\\ \hline
+\hspace*{6in}\vspace{0.25in}\\ \hline
+\hspace*{6in}\vspace{0.25in}\\ \hline
+\hspace*{6in}\vspace{0.25in}\\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{0.15in}
+
+\begin{quotation}
+\begin{centering}
+%\noindent {\em In theory, there is no difference between theory and practice.\\But, in practice, there is.\\}
+%\noindent {\em The Tao that is seen \\ Is not the true Tao, \\ until You bring fresh toner.\\}
+\noindent {\em A crash reduces\\Your expensive computer\\To a simple stone.\\}
+%\noindent {\em Three things are certain:\\Death, taxes, and lost data.\\Guess which has occurred.\\}
+%\noindent {\em You step in the stream,\\But the water has moved on.\\This page is not here.\\}
+%\noindent {\em Serious error.\\All shortcuts have disappeared.\\Screen. Mind. Both are blank.\\}
+\end{centering}
+\end{quotation}
+
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 1: Basic Java 1}
+
+\noindent \\
+Your TA will select one of the following short answer questions for you to answer:
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item What is the difference between a float and a double (looking for high level description here)? 
+	\item Java is strongly typed. What does this mean? Give an example to illustrate your point.
+	\item Describe one difference between primitive and Object types in Java.
+	\item Briefly, what is the Java API and why is it useful?
+	\item What is casting? Provide an example to illustrate your point.
+\end{itemize}
+
+\question[1]{Answer the question that was selected.}
+
+\answer[1.5in]{...}
+
+\question[1]{For this question, write a simple java program that reads in two variables and does one of the following. Your TAs will randomly select one of these options.}
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item Reads in two Strings from the keyboard and prints them to the console.
+	\item Reads in two integers from the keyboard and prints their sum to the console.
+	\item Reads in two doubles from the keyboard, converts them to integers, and prints the sum of the integers to the console. 
+\end{itemize}
+
+\begin{lstlisting}
+	//IMPORTS AND SUCH HERE
+	public class QuizQuestion{
+		public static void main(String[] args){
+			//YOUR CODE STARTS HERE:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		}
+	}
+\end{lstlisting}
+
+%----------------------------------------------------------------------
+
+
+
+\pageheader{Module 2: Basic Java 2}
+
+\noindent \\
+Your TA will select one of the following short answer questions for you to answer:
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item If an array is passed to a method and its contents altered, will the actual parameter be changed as well? Why or why not?
+	\item True or False: An if statement can contain an expression that evaluates to an integer because Java knows how to treat integers in this scenario. Explain your answer.
+	\item In Java, what happens if you do not include curly braces with your if-statements?
+	\item Briefly describe the difference between how primitives and references are stored in memory.
+	\item Write a short code snippet that produces a shared reference.
+\end{itemize}
+
+\question[1]{Answer the question that was selected.}
+
+\answer[1.5in]{...}
+
+\question[1]{For this question, write a Java method that takes in an array of integers as a parameter and does one of the following. Your TA will select which method you write.}
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item Compute the third highest integer in the array and print it to the console.
+	\item Print out all of multiples of 10 in the array in backwards order.
+	\item Print out all of the positive, even numbers.
+\end{itemize}
+
+\begin{lstlisting}
+	public static void quizMethod(int[] a){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+	}
+\end{lstlisting}
+
+%----------------------------------------------------------------------
+
+
+
+\pageheader{Module 3: Basic Java 3}
+
+\noindent \\
+Your TA will select two of the following short answer questions for you to answer:
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item When writing our **Card** class in lecture. What was the purpose of the *constructor*? Be as precise as you can here.
+	\item What is an enum? Give an example of when an enum is useful and describe the advantage of using one.
+	\item Why is it important to write the .equals() method when writing a class? Give a concrete example.
+	\item Describe why you might choose to make a field in your class private (instead of public).
+	\item Write a small Point class. The class should contain two integer fields (x and y), a constructor that sets x and y, and a method called *distance(Point other)* which returns the distance between this point and the other point.
+	\item In lecture, we wrote/saw a **Deck** class. Write a short *equals* method for the Deck class. Two decks are equal if and only if the array of cards contains the same cards in exactly the same order and the top indicator is equal as well.
+\end{itemize}
+
+\question[1]{Answer the first question that was selected.}
+
+\answer[2in]{}
+
+\question[1]{Answer the second question that was selected.}
+
+%----------------------------------------------------------------------
+
+
+
+\pageheader{Module 4: Vectors}
+
+\noindent \\
+Your TA will select one of the following short answer questions for you to answer:
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item Describe the difference in efficiency of inserting at the front of a Vector versus the back. Are there any special cases involved?
+	\item Verbally describe how removing from the end of a Vector works? In other words, how do we model the 
+	\item List one strength and one weakness of using a Vector. Please describe these in sufficient detail.
+	\item What is polymorphism? Why is it useful? Describe using the example of List and Vector from class.
+	\item How efficient is it to grab the item at a specific index of a Vector? How about to find a specific item in the Vector (e.g., is 10 in the Vector?). Briefly describe why these are different.
+\end{itemize}
+
+\question[1]{Answer the question that was selected.}
+
+\answer[1.5in]{...}
+
+\question[1]{For this question, write one of the methods for a Vector class. Your TA will select one of the following methods: insert(T data), remove(T data), insertAt(int index, T data), or resize().}
+
+\begin{lstlisting}
+public class Vector<T> implements List<T>
+	private T[] data;
+	private int size = 0;
+	private static final int INITIAL_CAPACITY = 100;
+
+	//TODO: WRITE THE CHOSEN METHOD HERE. 
+
+
+\end{lstlisting}
+
+\newif\ifcomment
+\commentfalse
+\ifcomment
+
+\fi
+
+%----------------------------------------------------------------------
+
+\end{document}
