@@ -5,8 +5,9 @@ CS2501 - Data Structures and Algorithms I
 --------------------------------------- 
 
 | Module | Homework 1 | Homework 2 |
-|--------------|------------------|------------------|
+|------------------------|----------------------------|----------------------------|
 | Basic Java 1 | <a href="BasicJava1/power.pdf">Intro and Power Function</a> | <a href="BasicJava1/sixFunctions.pdf">Six Functions</a> |
+| Basic Java 2 | <a href="BasicJava2/roomba.pdf">Roomba Simulator</a> | <a href="BasicJava2/roombaAnalysis.pdf">Roomba Analysis</a> |
 
 
 <a name="other"></a>Upcoming Homeworks (feel free to get ahead if you'd like)
@@ -14,7 +15,6 @@ CS2501 - Data Structures and Algorithms I
 
 | Module | Homework 1 | Homework 2 |
 |--------------|------------------|------------------|
-| Basic Java 2 | <a href="BasicJava2/roomba.pdf">Roomba Simulator</a> | <a href="BasicJava2/roombaAnalysis.pdf">Roomba Analysis</a> |
 | Basic Java 3 | <a href="BasicJava3/blackjack.pdf">Blackjack Implementation</a> | <a href="BasicJava3/blackjackAnalysis.pdf">Blackjack Analysis</a> |
 | Vectors | <a href="Vectors/vectors.pdf">Vector Implementation</a> | |
 | Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistsAnalysis.pdf">Linked List Analysis</a> |
