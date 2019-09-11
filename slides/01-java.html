@@ -1684,6 +1684,7 @@ public Class Card{
    * creating it. This is called overloading a method
    */
   public Card(int rank, Suit suit) {
+    this.rank = 1; // in case setRank fails
     this.setRank(rank);
     this.suit = suit;
   }
