@@ -99,7 +99,7 @@ public class Room {
 		
 		/* Clean the tiles under Roomba */
 		for(int i=roomba.getX()-(r); i<=roomba.getX()+(r); i++) {
-			for(int j = roomba.getY() - (r/2); j <= roomba.getY() + (r/2); j++) {
+			for(int j = roomba.getY() - (r); j <= roomba.getY() + (r); j++) {
 				this.cleanTile(i, j);
 			}
 		}
