@@ -334,12 +334,6 @@ public class Vector<T> implements List<T>
 
 \end{lstlisting}
 
-\newif\ifcomment
-\commentfalse
-\ifcomment
-
-\fi
-
 %----------------------------------------------------------------------
 
 
@@ -350,21 +344,21 @@ Your TA will select one of the following questions for you to answer:
 
 \begin{itemize}
 	\setlength\itemsep{0.25em}
-	\item Describe and explain the runtime of the following operations on a Linked List: inserting at head, at tail, removing at head, at tail.
+	\item Describe the runtime of these Linked List operations: insert at head, at tail, remove at head, at tail.
 	\item Describe why retrieving the item at index i is slower with a Linked List than with a Vector or Array.
-	\item Describe one advantage and one disadvantage that Linked Lists have over Vectors.
+	\item Describe the difference in how Linked Lists are laid out in memory versus Arrays. Be as precise as possible.
 	\item Suppose you have a doubly-linked-list in which each node stores one char of a word. Write psuedo-code describing a method that returns true if this linked list is a palindrome (e.g., racecar).
-	\item 
+	\item Suppose you have a singly-linked list (head pointer + next pointers). Write psuedo-code for a method that reverses the order of the list (change references here, not the contents of the nodes).
 \end{itemize}
 
 \question[1]{Answer the question that was selected.}
 
-\answer[1.5in]{...}
+\answer[2in]{...}
 
 \question[1]{For this question, write one of the methods for a LinkedList class. Your TA will select one of the following methods: insertAtHead(T data), removeAtTail(), insertAt(int index, T data), get(int index) or find(T data).}
 
 \begin{lstlisting}
-public class LinkedList<T> implements List<T>
+public class LinkedList<T> implements List<T> {
 	private ListNode<T> head, tail;
 	private int size;
 
@@ -372,6 +366,114 @@ public class LinkedList<T> implements List<T>
 
 
 \end{lstlisting}
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 6: Stacks and Queues}
+
+\noindent \\
+This quiz question is about the \emph{space efficiency} of List and Array based stacks and queues. Your TA will randomly select the following things:
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item Whether we are dealing with a stack or a queue
+	\item What type is being stored in the queue (int, char)
+	\item Whether the stack/queue is array-based (int fields where necessary, initial capacity of 100) or linked-list based (doubly-linked, head and tail pointer to dummy nodes).
+	\item How many items have been inserted into the stack/queue ($n \leq 30$)
+\end{itemize}
+
+When answering, remember that integers are 8 bytes, chars are 1 byte, and references are 8 bytes. The size of objects (e.g., ListNode) is just the sum of the size of its fields. 
+
+\question[1]{Given the constraints above, how many bytes of memory does the data structure consume? Do not include the reference to the stack/queue in your total}
+
+\answer[1in]{...}
+
+\question[1]{For this question, write one of the methods for an array-based queue class. Your TA will select one of the following methods: enqueue(T data), T dequeue(). You can (and should) invoke resize() if necessary.}
+
+\begin{lstlisting}
+	public class Queue<T> implements IQueue<T> {
+	  private T[] data;
+	  int size, front, back;
+
+	  //TODO: WRITE THE CHOSEN METHOD HERE. 
+\end{lstlisting}
+
+%----------------------------------------------------------------------
+
+
+
+
+
+\pageheader{Module 7: Big-Oh}
+
+\noindent \\
+Your TA will select one of the following questions regarding the formal definition of Big-Oh.
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item Explain the purpose of the constant $n_0$ in the formal definition of Big-Oh. In other words, in what specific situations is it most useful?
+	\item Explain the purpose of the constant $c$ in the formal definition of Big-Oh. In other words, in what specific situations is it most useful?
+	\item Describe a specific situation in which we would use Big-Omega ($\Omega(g)$) to analyze an algorithm.
+\end{itemize}
+
+\question[1]{Answer the selected question.}
+
+\answer[2in]{...}
+
+For this question, consider the following functions:
+
+
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+	\setlength\itemsep{0.15em}
+	\item $nlog_2(n)$
+	\item $n^2$
+	\item $b^n$
+	\item $log_d(n)$
+	\item $n$
+	\item $1$
+\end{itemize}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{itemize}
+	\setlength\itemsep{0.15em}
+	\item $n^alog_2(n)$
+	\item $n\!$
+	\item $cn^3$
+	\item $log_2(n)$
+	\item $n^3$
+\end{itemize}
+\end{minipage}
+
+\question[1]{Your TA will randomly select four constant integers a, b, c, and d. Substitute those constants in to the functionas and then order them from slowest to fastest growing. If the functions are in the same equivalence class, then make sure to note that in your ordering.}
+
+
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 8: Recursion}
+
+\question[1]{Your TA will select one of the following methods for you to code \textbf{recursively} (your solution MUST be recursive, but you may write a helper method with additional parameters if you wish):
+}
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item void print(ListNode c): Given the first node of a singly-linked list, print out the list in reverse order.
+	\item void reverse(int[] a): Given an array of integers, reverse the order of values in the array.
+	\item int sum(int[] a): Given an array of integers, return the sum of the even integers in the list.
+\end{itemize}
+
+\answer[2in]{...}
+
+
+\question[1]{Your TA will select another method for you to code \textbf{recursively} (same rules as above):}
+
+\begin{itemize}
+	\setlength\itemsep{0.25em}
+	\item void printBinary(int n): Prints all of the valid binary numbers of length $n$ (any order is fine, but no duplicates).
+	\item targetSum(int n, int target): Prints all of the integers with exactly $n$ digits whose digits sum to exactly the given target. For example, $n=2$ and target$=2$ would print (in any order) 11, 20, 02. You may assume you have access to a method called sum(int x) that sums the digits of x for you.
+	\item void splitList(LinkedList l, LinkedList a, LinkedList b): Given a linked-list l, and two empty lists b and c, split l by putting every other element in a, and the other alternating elements in b. List l should be empty after the method completes.
+\end{itemize}
 
 \newif\ifcomment
 \commentfalse
