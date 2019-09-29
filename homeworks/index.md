@@ -10,13 +10,13 @@ CS2501 - Data Structures and Algorithms I
 | Basic Java 2 | <a href="BasicJava2/roomba.pdf">Roomba Simulator</a> | <a href="BasicJava2/roombaAnalysis.pdf">Roomba Analysis</a> |
 | Basic Java 3 | <a href="BasicJava3/blackjack.pdf">Blackjack Implementation</a> | <a href="BasicJava3/blackjackAnalysis.pdf">Blackjack Analysis</a> |
 | Vectors | <a href="Vectors/vectors.pdf">Vector Implementation</a> | |
+| Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistsAnalysis.pdf">Linked List Analysis</a> |
 
 <a name="other"></a>Upcoming Homeworks (feel free to get ahead if you'd like)
 ---------------------------------------
 
 | Module | Homework 1 | Homework 2 |
 |--------------|------------------|------------------|
-| Linked Lists | <a href="LinkedLists/linkedlists.pdf">Linked List Implementation</a> | <a href="LinkedLists/linkedlistsAnalysis.pdf">Linked List Analysis</a> |
 | Stacks and Queues | <a href="StacksAndQueues/stacksAndQueues.pdf">Stack/Queue Implementation</a> | <a href="StacksAndQueues/stackAndQueueAnalysis.pdf">Stack/Queue Analysis</a> |
 | Big-Oh | <a href="BigOh/bigOh.pdf">Analyzing growth of functions</a> | |
 | Recursion | <a href="Recursion/recursion.pdf">Practicing recursion</a> | |
