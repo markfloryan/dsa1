@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 SEP 2019 11:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  4 OCT 2019 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -757,25 +757,33 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \colbreak@box=\box56
 \mc@col@check@num=\count133
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip64
+\enit@outerparindent=\dimen142
+\enit@toks=\toks29
+\enit@inbox=\box57
+\enitdp@description=\count134
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count134
-\lst@gtempboxa=\box57
-\lst@token=\toks29
-\lst@length=\count135
-\lst@currlwidth=\dimen142
-\lst@column=\count136
-\lst@pos=\count137
-\lst@lostspace=\dimen143
-\lst@width=\dimen144
-\lst@newlines=\count138
-\lst@lineno=\count139
-\lst@maxwidth=\dimen145
+\lst@mode=\count135
+\lst@gtempboxa=\box58
+\lst@token=\toks30
+\lst@length=\count136
+\lst@currlwidth=\dimen143
+\lst@column=\count137
+\lst@pos=\count138
+\lst@lostspace=\dimen144
+\lst@width=\dimen145
+\lst@newlines=\count139
+\lst@lineno=\count140
+\lst@maxwidth=\dimen146
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count140
-\lst@skipnumbers=\count141
-\lst@framebox=\box58
+\c@lstnumber=\count141
+\lst@skipnumbers=\count142
+\lst@framebox=\box59
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -794,44 +802,44 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen146
-\captionmargin@=\dimen147
-\captionwidth=\dimen148
-\caption@tempdima=\dimen149
-\caption@indent=\dimen150
-\caption@parindent=\dimen151
-\caption@hangindent=\dimen152
+\captionmargin=\dimen147
+\captionmargin@=\dimen148
+\captionwidth=\dimen149
+\caption@tempdima=\dimen150
+\caption@indent=\dimen151
+\caption@parindent=\dimen152
+\caption@hangindent=\dimen153
 )
-\c@ContinuedFloat=\count142
+\c@ContinuedFloat=\count143
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 )
-\c@subfigure=\count143
-\c@subtable=\count144
+\c@subfigure=\count144
+\c@subtable=\count145
 )
-\c@pagenum=\count145
-\c@quesnum=\count146
+\c@pagenum=\count146
+\c@quesnum=\count147
 
 (./quizzes.aux)
 \openout1 = `quizzes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 107.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
@@ -874,17 +882,17 @@ File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count147
-\scratchdimen=\dimen153
-\scratchbox=\box59
-\nofMPsegments=\count148
-\nofMParguments=\count149
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count150
-\MPscratchDim=\dimen154
-\MPnumerator=\count151
-\makeMPintoPDFobject=\count152
-\everyMPtoPDFconversion=\toks31
+\scratchcounter=\count148
+\scratchdimen=\dimen154
+\scratchbox=\box60
+\nofMPsegments=\count149
+\nofMParguments=\count150
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count151
+\MPscratchDim=\dimen155
+\MPnumerator=\count152
+\makeMPintoPDFobject=\count153
+\everyMPtoPDFconversion=\toks32
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -902,8 +910,8 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box60
-Package hyperref Info: Link coloring OFF on input line 106.
+\AtBeginShipoutBox=\box61
+Package hyperref Info: Link coloring OFF on input line 107.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -911,11 +919,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count153
+\c@section@level=\count154
 )
-LaTeX Info: Redefining \ref on input line 106.
-LaTeX Info: Redefining \pageref on input line 106.
-LaTeX Info: Redefining \nameref on input line 106.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
 
 (./quizzes.out) (./quizzes.out)
 \@outlinefile=\write3
@@ -923,21 +931,21 @@ LaTeX Info: Redefining \nameref on input line 106.
 
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 106.
-\c@lstlisting=\count154
+(lastpage)             ! on input line 107.
+\c@lstlisting=\count155
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 108.
-LaTeX Font Info:    Try loading font information for U+wasy on input line 112.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 109.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 113.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 118.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 119.
 
-Overfull \hbox (1.74336pt too wide) in paragraph at lines 131--136
+Overfull \hbox (1.74336pt too wide) in paragraph at lines 132--137
 \OT1/ppl/m/n/10 This quiz is CLOSED text book, closed-notes, closed-calculator,
  closed-cell phone, closed-com-pu-ter, closed-neighbor,
  []
@@ -946,15 +954,15 @@ Overfull \hbox (1.74336pt too wide) in paragraph at lines 131--136
 
 ]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 164.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 171.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 165.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 196.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 171.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
  [2
 
 ] [3
@@ -963,13 +971,13 @@ LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10> not available
 [4
 
 ]
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 327.
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 328.
 
  (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlppl.fd
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 327.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 328.
  [5
 
 ]
@@ -978,7 +986,7 @@ LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <10> not available
 ] [7
 
 ]
-Overfull \hbox (16.90001pt too wide) in paragraph at lines 426--447
+Overfull \hbox (16.90001pt too wide) in paragraph at lines 427--448
 [][] [] 
  []
 
@@ -989,23 +997,23 @@ AED: lastpage setting LastPage
 [9
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 486.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 486.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 487.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 487.
  (./quizzes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 486.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 486.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 487.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 487.
 Package rerunfilecheck Info: File `quizzes.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 486.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 487.
  ) 
 Here is how much of TeX's memory you used:
- 11616 strings out of 492995
- 166515 string characters out of 6132704
- 287433 words of memory out of 5000000
- 14916 multiletter control sequences out of 15000+600000
+ 11943 strings out of 492995
+ 171609 string characters out of 6132704
+ 293548 words of memory out of 5000000
+ 15194 multiletter control sequences out of 15000+600000
  10723 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,11n,43p,331b,1249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,11n,43p,334b,1307s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
@@ -1015,10 +1023,10 @@ e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
 17/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2017/texmf-dist/
 fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on quizzes.pdf (9 pages, 115245 bytes).
+Output written on quizzes.pdf (9 pages, 116545 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
- 79 named destinations out of 1000 (max. 500000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 209 compressed objects within 3 object streams
+ 124 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
