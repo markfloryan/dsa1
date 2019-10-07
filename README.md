@@ -23,6 +23,7 @@ repository first**
 - [Class Exercises](java/classExercises.html): Code we wrote in lecture 
 - Other stuff:
 	- [Java Cheat Sheet](java/javaCheatSheet/javaCheatSheet.pdf): A cheat sheet of common Java things. Will be updated throughout the semester.
+	- [Eclipse Debugger Tutorial](java/eclipseDebuggerTutorial.pdf): A tutorial on how to use the debugger in Eclipse.
 
 <a name="contributing"></a>Contributing to this Repository
 ----------------------------------------------------------
