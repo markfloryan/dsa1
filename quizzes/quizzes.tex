@@ -6,6 +6,7 @@
 \usepackage{palatino}
 \usepackage{wrapfig}
 \usepackage{lastpage}
+\usepackage[T1]{fontenc}
 \usepackage{color}
 \usepackage{ifthen}
 \usepackage[table]{xcolor}
@@ -481,6 +482,201 @@ For this question, consider the following functions:
 \ifcomment
 
 \fi
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 9: BSTs and AVL}
+
+\noindent \\
+Your TA will select one of the following questions regarding trees.
+
+\begin{enumerate}[label=(\alph*)]
+	\setlength\itemsep{0.25em}
+	\item List the big-theta worst-case runtimes for find(), insert(), and remove() on a binary search tree. Explain your answers.
+	\item List the big-theta worst-case runtimes for find(), insert(), and remove() on an avl tree. Explain your answers.
+	\item When fixing an avl tree via rotations, what is the maximum number of rotations that can occur? Explain your answer.
+	\item Write a short method that, given a TreeNode object, prints the tree rooted at that node using a post-order traversal.
+	\item Explain a situation in which you would NOT want to use a tree data structure.
+	\item When discussing Java Inheritance, we discussed how Java uses dynamic dispatch. Explain what dynamic dispatch is, BSTs and AVL Trees as an example in your explanation.
+\end{enumerate}
+
+\question[1]{Answer the selected question.}
+
+\answer[2in]{...}
+
+
+\question[1]{Your TA will select a random method for you to code. You will either write insert(T data), find(T data), or remove(T data) for a BST class, or rotateRight(TreeNode node) for an AVL class.}
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 10: Basic Sorts}
+
+\noindent \\
+Your TA will select one of the following questions regarding sorting algorithms.
+
+\begin{enumerate}[label=(\alph*)]
+	\setlength\itemsep{0.25em}
+	\item In class, we proved that any sorting algorithm that only swaps adjacent elements in a list MUST be $\Omega(n^2)$. Describe the proof.
+	\item Briefly describe why we used Java's Comparable Interface for sorting. What was the benfit of this interface?
+	\item What is a stable sort? Give a concrete example in which we would want to use a stable sort.
+	\item What is an in-place sort? What is the benefit of sorting in-place?
+	\item In class, we made a distinction between comparison sorts and adjacent sorts. Describe this difference.
+	\item Insertion sort is very fast in some situations. Describe and explain those situations.
+\end{enumerate}
+
+\question[1]{Answer the selected question.}
+
+\answer[2in]{...}
+
+
+\question[1]{Your TA will randomly select either bubbleSort(T[] list) or insertionSort(T[] list) for you to implement.}
+
+\begin{lstlisting}
+public static<T extends Comparable T>> void aSortingAlgorithm(T[] list){
+\end{lstlisting}
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 11: Advanced Sorts}
+
+\noindent \\
+Your TA will select one of the following questions regarding sorting algorithms.
+
+\begin{enumerate}[label=(\alph*)]
+	\setlength\itemsep{0.25em}
+	\item What are the Big-Theta worst-case and best-case runtimes of mergesort? Explain your answer.
+	\item What are the Big-Theta worst-case and best-case runtimes of quicksort? Explain your answer.
+	\item Is mergesort in-place? How about stable? Explain your answers.
+	\item Is quicksort in-place? How about stable? Explain your answers.
+	\item In class, we saw an argument for why comparison sorts must be $\Omega(nlogn)$. Recreate this argument.
+	\item Describe why one might implement a hybrid sorting algorithm? Give a concrete example to support your answer.
+\end{enumerate}
+
+\question[1]{Answer the selected question.}
+
+\answer[2in]{...}
+
+
+\question[1]{Your TA will randomly select one of the following methods for you to write. You may assume you have a swap function that takes a list and two indices and swaps the items at those locations. You may also assume you have the methods you are not writing (e.g., if writing mergesort, you can invoke merge.)}
+
+\begin{lstlisting}
+private static<T extends Comparable<T>> void mergeSort(T[] list, int i, int j)
+private static<T extends Comparable<T>> void merge(T[] list, int i, int mid, int j)
+private static<T extends Comparable<T>> void quickSort(T[] list, int i, int j)
+private static<T extends Comparable<T>> int lomutoPartition(T[] list, int i, int j)
+\end{lstlisting}
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 12: Hash Tables}
+
+\noindent \\
+Your TA will select one of the following questions regarding hash tables.
+
+\begin{enumerate}[label=(\alph*)]
+	\setlength\itemsep{0.25em}
+	\item What is the worst-case runtime for inserting into a hash table using each of linear probing, quadratic probing, and separate chaining? Assume that your hash table does not check for duplicates.
+	\item What is the worst-case runtime for removing from a hast table using each of linear probing, quadratic probing, and separate chaining? Assume that your hash table does not check for duplicates.
+	\item What the worst-case runtime of resizing and rehashing a hash table using each of linear probing, quadratic probing, and separate chaining? Assume that your hash table does not check for duplicates.
+	\item Briefly explain the trade-off in using a high vs a low load factor threshold for resizing.
+\end{enumerate}
+
+\question[1]{Answer the selected question.}
+
+\answer[2in]{...}
+
+\question[1]{Insert the following elements into the provided hash table. Your TA will select an arbitrary hash function(s), five arbitrary integer values to insert, and a collision resolution strategy (separate chaining, linear probing, quadratic probing)}
+
+\begin{minipage}{0.5\textwidth}
+\quad \quad \quad
+\renewcommand{\arraystretch}{3}
+\begin{tabular}{r|p{0.5in}|}
+\cline{2-2}
+0 &  \\ \cline{2-2} 
+1 &  \\ \cline{2-2} 
+2 &  \\ \cline{2-2} 
+3 &  \\ \cline{2-2} 
+4 &  \\ \cline{2-2} 
+5 &  \\ \cline{2-2} 
+6 &  \\ \cline{2-2} 
+7 &  \\ \cline{2-2} 
+\end{tabular}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+$h(x) =$
+\\
+\\
+\\
+$h_2(x) =$                       //if necessary
+\\
+\\
+\\
+Five values to insert:
+\end{minipage}
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 13: Priority Queues}
+
+\noindent \\
+Your TA will select one of the following questions regarding priority queues.
+
+\begin{enumerate}[label=(\alph*)]
+	\setlength\itemsep{0.25em}
+	\item Provide three advantages to storing a heap in an array, rather than using objects and references?
+	\item What is the worst-case runtime of push() on a min-heap? What about the expected time? Explain your answer.
+	\item What is the worst-case runtime of poll() on a min-heap? What about the expected time? Explain your answer.
+	\item Given the following min-heap: [NULL, 5, 7, 9, 22, 15, 12, 35]. Push a random integer $n$ ($n$ will be chosen by your TAs)
+\end{enumerate}
+
+\question[1]{Answer the selected question.}
+
+\answer[2in]{...}
+
+
+\question[1]{Your TA will randomly select one of the following min-heap methods for you to write. You may assume the others are implemented for you (e.g., you may use percolateDown() in poll())}
+
+\begin{lstlisting}
+	private ArrayList<T> heap; //you may assume this field exists
+
+	private void percolateUp(int index)
+	private void percolateDown(int index)
+	public T poll()
+	public void heapify() //turns heap field
+\end{lstlisting}
+
+%----------------------------------------------------------------------
+
+\pageheader{Module 14: Concurrency}
+
+\noindent \\
+Your TA will select one of the following questions regarding priority queues.
+
+\begin{enumerate}[label=(\alph*)]
+	\setlength\itemsep{0.25em}
+	\item When writing basic threads in Java, what is the difference between the methods run(), start(), and join(). Be as precise as you can.
+	\item Briefly describe the overall principle behind creating Java Exceptions? Why wouldn't we just let the code crash, or print out an error message, or similar?
+	\item What is a race condition? Give an example.
+	\item What is a lock? What does it do and why is it useful?
+	\item What is a deadlock? Give an example of how a deadlock might occur?
+\end{enumerate}
+
+\question[1]{Answer the selected question.}
+
+\answer[2in]{...}
+
+
+\question[1]{Your TA will randomly select either enqueue(T data) or dequeue() for a concurrent queue. Write the selected method. Your queue should be linked-list based and be thread-safe. Please list any fields for the class you'd like to add.}
+
+\begin{lstlisting}
+public class ConcurrentQueue<T> implements IQueue<T>{
+	//list any fields you'd like here:
+
+
+
+
+	//Write the requested method here:
+\end{lstlisting}
 
 %----------------------------------------------------------------------
 

@@ -451,6 +451,45 @@
 
 <!---------------------------------------------- -->
 
+  <section>
+
+    <section id="runningtimes" data-markdown class=center><script type="text/template">
+### Amortized Time Complexity
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+### Amortized Complexity - Motivation
+- Sometimes, worst case analysis doesn't really make sense
+  - worst case is really unlikely
+  - worst case doesn't happen very often'
+  - very high variance in runtime
+- In comes amortized complexity!!
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+### Amortized Complexity - Vector
+- IDEA: instead of analyzing worst case, analyze work done over *n* operations.
+  - calculate (work done over n operations) / n
+  - Thus, amortized work is the average work done over *n* invocations of a method
+- Used when a method often runs very fast, but occassionally runs slow.
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+### Amortized Complexity - Vector
+- EXAMPLE: Vector insertAtTail(T data)
+  - Usually very fast (Theta(1)).
+  - Occassionally slow (Theta(n)).
+- Let's work out the amortized complexity.
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+### Amortized Complexity - Vector
+- Vector insert has amortized constant time
+- Is technically worst-case linear (resizing) but that doesn't characterize the actual performance.
+- Thus amortized analysis is more appropriate in this situation.
+    </script></section>
+
+  </section>
 
 <!---------------------------------------------- -->
 
