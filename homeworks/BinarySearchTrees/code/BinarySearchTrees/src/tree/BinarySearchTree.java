@@ -37,12 +37,4 @@ public class BinarySearchTree<T extends Comparable<T>> extends BinaryTree<T> imp
 		//TODO: Implement this method
 		return null;
 	}
-	
-	/**
-	 * Returns the max item in the given subtree
-	 */
-	public TreeNode<T> findMax(TreeNode<T> curNode) {
-		//TODO: Implement this method
-		return null;
-	}
 }
