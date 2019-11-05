@@ -15,14 +15,14 @@ CS2501 - Data Structures and Algorithms I
 | Big-Oh | <a href="BigOh/bigOh.pdf">Analyzing growth of functions</a> | |
 | Recursion | <a href="Recursion/recursion.pdf">Practicing recursion</a> | |
 | BSTs and AVL | <a href="BinarySearchTrees/BinarySearchTrees.pdf">Tree Implementations</a> | <a href="BinarySearchTrees/BSTAnalysis.pdf">Tree Analysis</a> |
+| Basic Sorts | <a href="BasicSorts/basicSorts.pdf">Implementing Basic Sorts</a>| |
+| Advanced Sorts | <a href="AdvancedSorts/advancedSorts.pdf">Implementing Advanced Sorts</a> | <a href="AdvancedSorts/sortingAnalysis.pdf">Analyzing Sorting Algorithms</a> |
 
 <a name="other"></a>Upcoming Homeworks (feel free to get ahead if you'd like)
 ---------------------------------------
 
 | Module | Homework 1 | Homework 2 |
 |--------------|------------------|------------------|
-| Basic Sorts | <a href="BasicSorts/basicSorts.pdf">Implementing Basic Sorts</a>| |
-| Advanced Sorts | <a href="AdvancedSorts/advancedSorts.pdf">Implementing Advanced Sorts</a> | <a href="AdvancedSorts/sortingAnalysis.pdf">Analyzing Sorting Algorithms</a> |
 | Hash Tables | <a href="HashTables/hashTables.pdf">Implementing Hash Table and Word Search Solver</a> | <a href="HashTables/hashTableAnalysis.pdf">Hash Table Optimizations</a> |
 | Priority Queues | <a href="PriorityQueues/PriorityQueues.pdf">Implementing Heap and HeapSort</a> | <a href="PriorityQueues/PriorityQueueAnalysis.pdf">Analysis of Heap Performance</a> |
 | Concurrency | <a href="Concurrency/concurrency.pdf">Concurrent Queue Implementation</a> | <a href="Concurrency/concurrencyAnalysis.pdf">Concurrent Queue Analysis</a> |
