@@ -65,6 +65,8 @@
 ### Contents
 &nbsp;  
 [ADTs Covered So Far](#/adtssofar)  
+[Maps and Sets](#/MapsAndSets)
+
 [Hash Tables](#/hashtables)  
 [Separate Chaining](#/separatechaining)  
 [Open Addressing](#/openaddressing)  
@@ -174,6 +176,50 @@
 
   </section>
 
+  <section>
+
+    <section id="MapsAndSets" data-markdown class="center"><script type="text/template">
+## ASIDE: Maps and Sets
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+## Two new abstract data types
+- *Set*: Any data structure that stores a bunch of elements
+  - Insert/retrieve done using the element itself (e.g., insert(data))
+  - No duplicate values allowed in sets
+- *Map*: Any data structure that stores key/value pairs
+  - insert and retrieve by key. e.g., insert("oranges", 2.95);
+  - retrieve("oranges") returns 2.95
+  - no duplicate keys allowed.
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+## Two new abstract data types
+- *Set*: Methods include:
+  - insert(data), find(data), remove(data)
+  - No real concept of indexing like a list
+- *implementation examples*:
+  - Trees (BST, etc.). Java has a TreeSet class
+  - Hash Tables. Java has a HashSet class
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+## Two new abstract data types
+- *Map*: Methods include:
+  - put(key, T data), T get(key), T remove(key)
+  - No real concept of indexing like a list
+- *implementation examples*:
+  - Trees (BST, etc.). Java has a TreeMap class
+  - Hash Tables. Java has a HashMap class
+    </script></section>
+
+    <section data-markdown><script type="text/template">
+## Which ADT is hash table?
+- A hash table can be used to implement a Map or a Set
+- In this class, we will usually use the latter (easier to show examples) but sometimes use either.
+    </script></section>
+
+  </section>
 
   <section>
 
